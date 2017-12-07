@@ -6,6 +6,8 @@ If you want tech support, please ask in the X-Plane.org thread on the subject.
 If you have concrete fixes or suggestions (or specific bug reports with reproduction steps) please do file a Github issue. We will be more than happy to offer some guidance. 
 If you have questions (or have issues reading commit in Russian messages in Russian) - please ask.
 
+It is the developers version by pilot40. After each test the dev branch will be merged with default one.
+
 KLN90
 
 This aircraft includes the KLN90 from the EADT project, and it is enabled by default.
