@@ -1,0 +1,13 @@
+AIRAC cycle    : 1103
+Revision       : 1
+Valid (from/to): 10/MAR/2011 - 06/APR/2011
+
+Forum          : http://forum.navigraph.com
+
+Data provided by  Navigraph - www.navigraph.com
+Data copyright (c) 2011 Navtech Inc
+This data may not be used, recompiled, interpreted or distributed for any purpose without the written consent of Navigraph. The contents of this database is dated and must not be used for real world navigation as it is unlawful and unsafe to do so.
+
+
+Parser-Version : DFD v1.0 11.0331 (c) Richard Stefan
+Files parsed on: 21/04/2011

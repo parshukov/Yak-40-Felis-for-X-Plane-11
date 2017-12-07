@@ -1,0 +1,57 @@
+  * toggle panel command can be specified during panel creation
+  * default values for properties added
+  * double properties support added
+  * commands API added
+  * subpanels can be resized
+  * subpanels should popup after click
+  * subpanel can be created without close button and background
+  * Panels dragging fixed
+  * OnMouseDown event restored
+  * SLAVA has fullscreen option
+  * Mouse dragging should be handled by component received initial mouse click
+  * Components can be stored in own subdirectories
+  * FPS limiter added to SLAVA application
+  * Stand-alone avionics application restored
+  * Initial networking support
+  * Tu-104 altitude autopilot snaps to 50, not 100
+  * Added textureLit component which ignores current cockptit lighting
+  * Only general (draw) components left if Components folder
+
+2008-23-11 0.6.1 released
+
+  * cursor changes shape in 3D cockpit
+  * RtTimer conflict fixed
+  * Tu-104 gauges rearranged
+  * Flaps indicator added to Tu-104
+  * Tu-104 quick reference updated with flaps information
+  * adjuster function problem solved
+
+2008-06-12 0.6.0 released
+
+  * metric autopilot settings added to Tu-104 
+  * digital tapes can show negative values
+  * digital tapes doesn't shows leading zeroes by default
+  * Tu-104B by Boris Ishenko added as example aircraft
+  * direction of digits at digits tape changed
+  * missed version.h added to distribution
+  * clicks can't go through popup panels anymore
+  * 2d panel clicks fixed
+  * clickable areas fixed
+  * simple metric DME added
+  * VD-10 altimeter added
+  * LUN-1140-02-08 radio altimeter added
+  * needles keeps their aspect automatically
+  * needleWidth and needleHeight property removed
+
+2008-05-24 0.5.2 released
+
+  * missed xa_update call added
+  * migrated from DevIL to SOIL.  no more external liblaries required
+
+2008-05-24 0.5.0 released
+
+  * custom propeties survives after F8 pressed
+  * update() function added
+  * properties initialization and destruction moved out from libavionics
+
+

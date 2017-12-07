@@ -1,0 +1,116 @@
+NETWORKED PROPERTIES
+====================
+
+Networked properties is network protocol which allows to get and set
+properties values over network.   Property is named typed value.
+Property with the same name but different type treated as different
+properties.
+
+Typical session includes connection setup, property subscription,
+cycles of receiving properties values, setting properties and finally
+subscription canceling.
+
+Transport protocol is TCP.
+
+
+0. CONNECTION SETUP
+-------------------
+
+In order to setup connection client should establish TCP connection to
+server and send string 'NP1\n' without quotes, \n is carriedge
+return character.
+
+In response server will send the same characters back and random
+sequence of 16 bytes.  Client should calculate MD5 checksum over them
+and password, and send result to server.  If authentication will be
+OK, server will send word PASS or DENY otherwise and close connetion
+immediatelly.
+
+
+1. SUBSCRIPTION
+---------------
+
+Subscription to property has following format:
+
+Field         Size      Description
+============= ========= ============================
+command       1 byte    equals to 0x01 or 0x05
+type          1 byte    type of property
+id            1 byte    unique property ID
+size          1 byte    length of property name
+name          size      property name
+
+Server doesn't return anything in reply, but value of property should
+be sent on next update command.
+
+If commands equals to 0x05 and proerty doesn't exists, it will be created.
+
+Allowed properties types are:  
+
+Code  C++ Name   Description
+===== ========== =====================================
+1     int        32 bit signed integer in network order
+2     float      IEEE float
+3     double     IEEE double
+
+
+2. SET PROPERTY VALUE
+---------------------
+
+In order to set property value client have to sent following packet:
+
+Field         Size      Description
+============= ========= ============================
+command       1 byte    equals to 0x02
+id            1 byte    property ID
+type          1 byte    type of property
+serial        2 bytes   number of set request
+data          variable  property value
+
+Each set request has serial number.  It must equals to previous set request
+serial number plus one.  First set request must have serial number equals 
+to 1.  After request number 0xFFFF next request will be 0x0000.
+
+Data format depends on property type.  For integer properties it is 4-bytes
+integer in network byte order.  Float and Double properties transfered
+in corresponding IEEE formats.
+
+Server will not reply for set property message but it will send property
+new value on next update.
+
+
+3. GET PROPERTIES VALUES
+------------------------
+
+Server sends values of all changed properties after get values request.
+Get values request consists of single byte equals to 0x03:
+
+Field         Size      Description
+============= ========= ============================
+command       1 byte    equals to 0x03
+
+Response to this command consist of header and properties data:
+
+Field         Size      Description
+============= ========= ============================
+command       1 byte    equals to 0x04
+count         1 byte    number of properties in reply
+serial        2 bytes   last seen set seral number
+data          variable  properies values
+
+Each reply has last seen set property number.  If there are wasn't any set
+property requests yet serial number equals to 0.
+
+Each property sent in following format:
+
+Field         Size      Description
+============= ========= ============================
+id            1 byte    property ID
+data          variable  property value
+
+data format depends on property type.  For integer properties it is 4-bytes
+integer in network byte order.  Float and Double properties transfered
+in corresponding IEEE formats.  Type is always the same as in property
+subscription request.
+
+
