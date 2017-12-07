@@ -17,6 +17,19 @@ defineProperty("oil_p", globalPropertyf("sim/cockpit2/engine/indicators/oil_pres
 
 -- oil temperature
 defineProperty("oil_t", globalPropertyf("sim/cockpit2/engine/indicators/oil_temperature_deg_C[0]"))
+--defineProperty("oil_t_0", globalPropertyf("sim/cockpit2/engine/indicators/oil_temperature_deg_C[0]"))
+--defineProperty("oil_t_1", globalPropertyf("sim/cockpit2/engine/indicators/oil_temperature_deg_C[1]"))
+--defineProperty("oil_t_2", globalPropertyf("sim/cockpit2/engine/indicators/oil_temperature_deg_C[2]"))
+--    get(oil_t_0)
+--    print (oil_t_0)
+--    message_printed = true
+--	get(oil_t_1)
+--    print (oil_t_1)
+--    message_printed = true
+--	get(oil_t_2)
+--    print (oil_t_2)
+--    message_printed = true
+
 
 -- power
 defineProperty("DC_27_volt", globalPropertyf("sim/custom/xap/power/DC_27_volt")) -- 27 volt
@@ -42,6 +55,7 @@ function update()
 	local CC = 0
 	if get(DC_27_volt) > 21 then power27 = 1 else power27 = 0 end
 	if get(AC_36_volt) > 30 then power36 = 1 else power36 = 0 end
+
 	
 	-- fuel and oil pressure angle
     if power27 * power36 * manometer * azs > 0 then
@@ -69,7 +83,6 @@ function update()
 	
 	set(emi_cc, CC)
 
-	
 end
 
 -- emi3 consists of several components
@@ -100,8 +113,8 @@ components = {
         position = { 107, 10, 106, 106 },
         image = get(needles_1),
         angle = function()
-			return oil_t_angle
-        end   
+			return oil_t_angle			
+        end        	
     },   
  
 	-- yellow cap

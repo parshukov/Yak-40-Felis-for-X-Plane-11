@@ -10,7 +10,8 @@ createProp("sim/custom/xap/sim_version", "int", 9); -- sim version
 
 -- create custom data-refs
 -- all initial values are for running engines load
-
+--		print (oil_t),
+--		message_printed = true,
 -- time --
 createProp("sim/custom/xap/time/frame_time", "float", 0.01); -- time between frames
 
