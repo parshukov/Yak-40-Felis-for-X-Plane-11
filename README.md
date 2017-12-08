@@ -6,10 +6,12 @@ If you want tech support, please ask in the X-Plane.org thread on the subject.
 If you have concrete fixes or suggestions (or specific bug reports with reproduction steps) please do file a Github issue. We will be more than happy to offer some guidance. 
 If you have questions (or have issues reading commit in Russian messages in Russian) - please ask.
 
+It is the developers version by pilot40. After each test the dev branch will be merged with default one.
+
 KLN90
 
 This aircraft includes the KLN90 from the EADT project, and it is enabled by default.
 Make sure to copy the directories from Install_into_main_XP_directory to the root dir of the sim before you load the aircraft.
 The KLN is offered as part of this package by kind permission from Dennis Pruefer, the original author. You are not permitted to redistribute the package commercially with the KLN included.
 
-This aircraft was updated by avsim users: 1941, P.Pranov, R.Guseynov, O.Trono, N.Parshukov, M.Zuev
+This aircraft was updated by avsim users: 1941, P.Pranov, R.Guseynov, O.Tronov, N.Parshukov, M.Zuev
