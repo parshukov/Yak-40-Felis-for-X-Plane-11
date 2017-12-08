@@ -1004,16 +1004,17 @@ components = {
 		position = {1200, 1646, 200, 200},
 		fuel_p = globalPropertyf("sim/cockpit2/engine/indicators/fuel_pressure_psi[1]"),
 		oil_p = globalPropertyf("sim/cockpit2/engine/indicators/oil_pressure_psi[1]"),
-		oil_t = globalPropertyf("sim/cockpit2/engine/indicators/oil_temperature_deg_C[1]"),
+		oil_t = globalPropertyf("sim/cockpit2/engine/indicators/oil_pressure_psi[1]"),
 		AZS = globalPropertyi("sim/custom/xap/azs/AZS_eng_gau_1_sw"),
 		emi_cc = globalPropertyf("sim/custom/xap/gauges/emi1_cc"), -- cc
+		
 	},
 
 	emi3 {
 		position = {1400, 1646, 200, 200},
 		fuel_p = globalPropertyf("sim/cockpit2/engine/indicators/fuel_pressure_psi[0]"),
 		oil_p = globalPropertyf("sim/cockpit2/engine/indicators/oil_pressure_psi[0]"),
-		oil_t = globalPropertyf("sim/cockpit2/engine/indicators/oil_temperature_deg_C[0]"),
+		oil_t = globalPropertyf("sim/cockpit2/engine/indicators/oil_pressure_psi[0]"),
 		AZS = globalPropertyi("sim/custom/xap/azs/AZS_eng_gau_2_sw"),
 		emi_cc = globalPropertyf("sim/custom/xap/gauges/emi2_cc"), -- cc
 	},
@@ -1022,7 +1023,7 @@ components = {
 		position = {1600, 1646, 200, 200},
 		fuel_p = globalPropertyf("sim/cockpit2/engine/indicators/fuel_pressure_psi[2]"),
 		oil_p = globalPropertyf("sim/cockpit2/engine/indicators/oil_pressure_psi[2]"),
-		oil_t = globalPropertyf("sim/cockpit2/engine/indicators/oil_temperature_deg_C[2]"),
+		oil_t = globalPropertyf("sim/cockpit2/engine/indicators/oil_pressure_psi[2]"),
 		AZS = globalPropertyi("sim/custom/xap/azs/AZS_eng_gau_3_sw"),
 		emi_cc = globalPropertyf("sim/custom/xap/gauges/emi3_cc"), -- cc
 	},

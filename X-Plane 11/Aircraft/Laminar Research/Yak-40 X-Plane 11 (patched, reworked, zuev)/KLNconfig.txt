@@ -12,8 +12,8 @@ YOU SHOULDN'T EVEN READ IT!
 #Barounit0
 #GPSHobbs28894.478087425
 #GPSTurnons11
-#LastLat55.278583526611
-#LastLon86.116676330566
+#LastLat0
+#LastLon0
 #RWYminlength1000
 #RWYsurface1
 #Fuelunit4
