@@ -14,4 +14,4 @@ This aircraft includes the KLN90 from the EADT project, and it is enabled by def
 Make sure to copy the directories from Install_into_main_XP_directory to the root dir of the sim before you load the aircraft.
 The KLN is offered as part of this package by kind permission from Dennis Pruefer, the original author. You are not permitted to redistribute the package commercially with the KLN included.
 
-This aircraft was updated by avsim users: 1941, P.Pranov, R.Guseynov, O.Trono, N.Parshukov, M.Zuev
+This aircraft was updated by avsim users: 1941, P.Pranov, R.Guseynov, O.Tronov, N.Parshukov, M.Zuev
