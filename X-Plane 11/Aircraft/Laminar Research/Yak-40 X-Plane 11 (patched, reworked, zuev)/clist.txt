@@ -4,7 +4,7 @@ sw_item:Parking brake|SET:sim/flightmodel/controls/parkbrake:!0
 sw_item:Pins and covers|REMOVED, ON BOARD:sim/custom/xap/covers/static1_cap:0
 sw_item:Doors|SECURED:sim/cockpit2/switches/custom_slider_on[4]:0
 sw_item:GPU|CONNECTED:sim/custom/xap/power/ground_available:1
-sw_item:KLN90B|ON:sim/custom/xap/KLN90/Toggle_Power_Switch:1
+sw_item:KLN90B|ON:sim/custom/xap/kln_power:1
 
 sw_checklist:Before Engine Start:Before Engine Start (part 1)
 sw_rcolsize:20
@@ -102,7 +102,7 @@ sw_item:Left engine RPM|INCREASING:sim/cockpit2/engine/indicators/engine_speed_r
 sw_item:Left engine fuel flow |INCREASING:sim/cockpit2/engine/indicators/EGT_deg_C[1]:>0.1
 sw_item:Left engine fuel pressure|CHECKED:sim/cockpit2/engine/indicators/fuel_pressure_psi[1]:>0.1
 sw_item:Left engine oil pressure|CHECKED:sim/cockpit2/engine/indicators/oil_pressure_psi[1]:>0.1
-sw_item:Left engine oil temperature|CHECKED:sim/cockpit2/engine/indicators/oil_temperature_deg_C[1]:>0.1
+sw_item:Left engine oil temperature|CHECKED:sim/cockpit2/engine/indicators/fuel_pressure_psi[1]:>0.1
 sw_item:Left engine EGT|INCREASING:sim/flightmodel2/engines/engine_is_burning_fuel[1]:>0.1
 sw_item:Left engine RPM|STABILIZED:sim/cockpit2/engine/indicators/engine_speed_rpm[1]:>51
 sw_item:Generator left|ON:sim/custom/xap/power/gen1_on_bus:1
@@ -121,7 +121,7 @@ sw_item:Right engine RPM|INCREASING:sim/cockpit2/engine/indicators/engine_speed_
 sw_item:Right  engine fuel flow|INCREASING:sim/cockpit2/engine/indicators/EGT_deg_C[2]:>0.1
 sw_item:Right  engine fuel pressure|CHECKED:sim/cockpit2/engine/indicators/fuel_pressure_psi[2]:>0.1
 sw_item:Right  engine oil pressure|CHECKED:sim/cockpit2/engine/indicators/oil_pressure_psi[2]:>0.1
-sw_item:Right  engine oil temperature|CHECKED:sim/cockpit2/engine/indicators/oil_temperature_deg_C[2]:>0.1
+sw_item:Right  engine oil temperature|CHECKED:sim/cockpit2/engine/indicators/fuel_pressure_psi[2]:>0.1
 sw_item:Right  engine EGT|INCREASING:sim/flightmodel2/engines/engine_is_burning_fuel[2]:>0.1
 sw_item:Right engine RPM|STABILIZED:sim/cockpit2/engine/indicators/engine_speed_rpm[2]:>51
 sw_item:Generator right|ON:sim/custom/xap/power/gen3_on_bus:1
@@ -135,7 +135,7 @@ sw_item:Center engine RPM|INCREASING:sim/cockpit2/engine/indicators/engine_speed
 sw_item:Center engine fuel flow|INCREASING:sim/cockpit2/engine/indicators/EGT_deg_C[0]:>0.1
 sw_item:Center engine fuel pressure|CHECKED:sim/cockpit2/engine/indicators/fuel_pressure_psi[0]:>0.1
 sw_item:Center engine oil pressure|CHECKED:sim/cockpit2/engine/indicators/oil_pressure_psi[0]:>0.1
-sw_item:Center engine oil temperature|CHECKED:sim/cockpit2/engine/indicators/oil_temperature_deg_C[0]:>0.1
+sw_item:Center engine oil temperature|CHECKED:sim/cockpit2/engine/indicators/fuel_pressure_psi[0]:>0.1
 sw_item:Center engine EGT|INCREASING:sim/flightmodel2/engines/engine_is_burning_fuel[0]:>0.1
 sw_item:Center engine RPM|STABILIZED:sim/cockpit2/engine/indicators/engine_speed_rpm[0]:>51
 sw_item:Generator center|ON:sim/custom/xap/power/gen2_on_bus:1
@@ -360,7 +360,7 @@ sw_item:Flaps|RETRACTED:sim/flightmodel/controls/wing1l_fla1def:0
 sw_item:Stabilizer trim|RESET:sim/custom/xap/control/pitch_trim:-1
 sw_item:Transponder mode|STANDBY:sim/cockpit/radios/transponder_mode:1
 sw_item:WX radar|OFF:sim/custom/xap/gauges/kontur_power:0
-sw_item:KLN90B|OFF:sim/custom/xap/KLN90/Toggle_Power_Switch:0
+sw_item:KLN90B|OFF:sim/custom/xap/kln_power:0
 
 sw_checklist:After Landing (part 2)
 sw_rcolsize:20
