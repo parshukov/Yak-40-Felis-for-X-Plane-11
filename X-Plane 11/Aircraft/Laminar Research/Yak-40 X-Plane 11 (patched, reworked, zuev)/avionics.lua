@@ -371,6 +371,7 @@ createProp("sim/custom/xap/gauges/rv_2_cc", "float", 0); --rv work
 
 -- fuel
 createProp("sim/custom/xap/fuel/act_sw", "int", 1); -- center fuel automat switcher
+createProp("sim/custom/xap/fuel/act_test_lamp", "int", 1);-- center fuel automat control lamp-------------pilot40
 createProp("sim/custom/xap/fuel/fuel_pump1_sw", "int", 1); -- fuel pump switcher
 createProp("sim/custom/xap/fuel/fuel_pump2_sw", "int", 1); -- fuel pump switcher
 createProp("sim/custom/xap/fuel/fuel_pump2_emerg_sw", "int", 0); -- fuel pump switcher

@@ -37,6 +37,7 @@ defineProperty("AZS_KursMP_sw", globalPropertyi("sim/custom/xap/azs/AZS_KursMP_s
 defineProperty("power_sw", globalPropertyi("sim/custom/xap/gauges/nav1_power")) -- power switch
 defineProperty("nav_button", globalPropertyi("sim/custom/xap/gauges/nav1_button")) -- test buttons
 
+
 defineProperty("frame_time", globalPropertyf("sim/custom/xap/time/frame_time")) -- time for frames
 
 -- images table
@@ -308,7 +309,7 @@ components = {
         
         onMouseClick = function(x, y, button) 
 			if get(nav_button) == 0 then playSample(btn_click, 0) end
-			--if power and not isSamplePlaying(tone1) then playSample(tone1, 1) end
+			if power and not isSamplePlaying(tone1) then playSample(tone1, 1) end
 			set(nav_button, 1)
             return true
         end,
@@ -332,7 +333,7 @@ components = {
         
         onMouseClick = function(x, y, button) 
 			if get(nav_button) == 0 then playSample(btn_click, 0) end
-			--if power and not isSamplePlaying(tone2) then playSample(tone2, 1) end
+			if power and not isSamplePlaying(tone2) then playSample(tone2, 1) end
 			set(nav_button, 2)
             return true
         end,
@@ -356,7 +357,7 @@ components = {
         
         onMouseClick = function(x, y, button) 
 			if get(nav_button) == 0 then playSample(btn_click, 0) end
-			--if power and not isSamplePlaying(tone3) then playSample(tone3, 1) end
+			if power and not isSamplePlaying(tone3) then playSample(tone3, 1) end
 			set(nav_button, 3)
             return true
         end,
