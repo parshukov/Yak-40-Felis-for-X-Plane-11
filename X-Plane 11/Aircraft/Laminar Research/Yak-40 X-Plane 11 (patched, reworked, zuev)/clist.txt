@@ -230,7 +230,7 @@ sw_rcolsize:20
 sw_item:KLN90B|СОГЛАСОВАНО
 sw_item:Стояночный тормоз|ВЫКЛЮЧЕН:sim/flightmodel/controls/parkbrake:0
 sw_item:Руление|~30км/ч:sim/flightmodel/position/indicated_airspeed:1|17
-sw_item:Основные тормоза|ПРОВЕРЕНЫ:sim/flightmodel/controls/parkbrake:1
+sw_itemid:Основные тормоза|ПРОВЕРЕНЫ
 sw_item:Показания гирокомпаса|ПРОВЕРЕНЫ
 sw_item:Указатель поворота на ДА-30|ПРОВЕРЕН
 
@@ -255,7 +255,7 @@ sw_checklist:На исполнительном
 sw_rcolsize:20
 sw_item:Курс ВПП|УСТАНОВЛЕН СООТВЕТСТВУЕТ
 sw_item:РУДы|МАЛЫЙ ГАЗ:sim/cockpit2/engine/actuators/throttle_ratio:<0.1
-sw_item:Тормоза|НАЖАТЫ:sim/flightmodel/controls/parkbrake:!0
+sw_item:Тормоза|НАЖАТЫ
 sw_item:Левая фара|ПОСАДОЧНЫЙ:sim/cockpit2/switches/landing_lights_switch[0]:1
 sw_item:Правая фара|ПОСАДОЧНЫЙ:sim/cockpit2/switches/landing_lights_switch[1]:1
 sw_item:Время взлёта|ПРОВЕРЕНО
@@ -272,9 +272,9 @@ sw_itemvoid:Подьем
 sw_itemvoid:Отрыв
 sw_item:Скорость|БЕЗОПАСНАЯ:sim/flightmodel/position/indicated_airspeed:>120
 sw_item:Шасси|УБРАТЬ:sim/cockpit2/gauges/indicators/vvi_fpm_pilot:>500
-sw_item:Тормоза|НАЖАТЫ:sim/flightmodel/controls/parkbrake:!0
+sw_itemvoid:Тормоза|НАЖАТЫ
 sw_item:Шасси|УБРАНЫ:sim/cockpit/switches/gear_handle_status:0
-sw_item:Тормоза|ОСВОБОЖДЕНЫ:sim/flightmodel/controls/parkbrake:0
+sw_itemvoid:Тормоза|ОСВОБОЖДЕНЫ
 sw_item:Носовое колесо|RED LIGHT:sim/flightmodel2/gear/deploy_ratio[0]:0
 sw_item:Левое колесо|RED LIGHT:sim/flightmodel2/gear/deploy_ratio[1]:0
 sw_item:Правое колесо|RED LIGHT:sim/flightmodel2/gear/deploy_ratio[2]:0
@@ -284,18 +284,18 @@ sw_itemvoid:Закрылки убрать
 sw_item:Закрылки|УБРАНЫ:sim/flightmodel/controls/wing1l_fla1def:0
 sw_item:Скорость|НЕ МЕНЕЕ 320:sim/flightmodel/position/indicated_airspeed:>172
 sw_item:Режим двигателей|НОМИНАЛЬНЫЙ 95%:sim/flightmodel/position/indicated_airspeed:>136
+sw_item:СКВ|ВКЛЮЧЕНА:sim/custom/xap/srd/bleed_ON:1
 sw_item:Левая фара|ВЫКЛЮЧЕНА:sim/cockpit2/switches/landing_lights_switch[0]:0
 sw_item:Правая фара|ВЫКЛЮЧЕНА:sim/cockpit2/switches/landing_lights_switch[1]:0
 sw_item:Фары|УБРАНЫ:sim/custom/xap/misc/lan_light_open_sw:0
-sw_itemvoid:СКВ
 sw_itemvoid:Скорость в наборе 320-350 км/ч
 
 sw_checklist:На высоте перехода
 sw_rcolsize:20
-sw_item:Метровый высотомер КВС|760 УСТАНОВЛЕНО:sim/cockpit2/gauges/actuators/barometer_setting_in_hg_copilot:29.92
-sw_item:Футовый высотомер КВС|1013 УСТАНОВЛЕНО:sim/custom/xap/gauges/vd10ft_press:29.92
-sw_item:Метровый высотомер второго пилота|760 УСТАНОВЛЕНО:sim/cockpit2/gauges/actuators/barometer_setting_in_hg_copilot:29.92
-sw_item:Футовый высотомер второго пилота|1013 УСТАНОВЛЕНО:sim/custom/xap/gauges/uvid30fk_press:29.92
+sw_item:Метровый высотомер КВС|760 УСТАНОВЛЕНО:sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot:29.924690
+sw_item:Футовый высотомер КВС|1013 УСТАНОВЛЕНО:sim/custom/xap/gauges/vd10ft_press:29.914015
+sw_item:Метровый высотомер второго пилота|760 УСТАНОВЛЕНО:sim/cockpit2/gauges/actuators/barometer_setting_in_hg_copilot:29.924690
+sw_item:Футовый высотомер второго пилота|1013 УСТАНОВЛЕНО:sim/custom/xap/gauges/uvid30fk_press:29.914015
 sw_item:Показания высотомеров|СВЕРЕНЫ
 sw_item:Перепад давления в кабине|РАСТЁТ
 
@@ -327,9 +327,10 @@ sw_item:Обогрев ППД правый|ВКЛЮЧЕН:sim/custom/xap/antiice
 sw_item:Обогрев РИО-3|ВКЛЮЧЕН:sim/custom/xap/antiice/rio3:1
 sw_item:Давление в основной гидросистеме|В НОРМЕ:sim/custom/xap/hydro/main_press:>99.9
 sw_item:Давление в аварийной гидросистеме|В НОРМЕ:sim/custom/xap/hydro/emerg_press:>99.9
-sw_item:Давление аэродрома посадки|УСТАНОВЛЕНО
+sw_item:СКВ давление аэродрома посадки|УСТАНОВЛЕНО
 sw_item:Не курить, пристегнуть ремни|ВКЛЮЧЕНО:sim/cockpit2/switches/no_smoking:1
 sw_itemvoid:Режим двигателя до высоты 4000м не ниже 88% N1
+sw_itemvoid:до высоты 4000м не ниже 88% N1!
 sw_item:ПРИБОРНАЯ СКОРОСТЬ НА СНИЖЕНИИ|НЕ БОЛЕЕ 450км/ч!!:sim/flightmodel/position/indicated_airspeed:<243
 
 sw_checklist:На эшелоне перехода
@@ -345,21 +346,21 @@ sw_rcolsize:20
 sw_item:Маршрут/Посадка режим|ПОСАДКА:sim/custom/xap/gauges/kp_route:0
 sw_itemvoid:Перед разворотом на посадочную прямую
 sw_item:Радиовысотомер|ВПР УСТАНОВЛЕНА
-sw_item:Режим двигателя|ВЫДЕРЖИВАТЬ СКОРОСТЬ НЕ БОЛЕЕ 300км/ч:sim/flightmodel/position/indicated_airspeed:<151
+sw_item:Режим двигателя|СКОРОСТЬ < 300км/ч:sim/flightmodel/position/indicated_airspeed:<151
 sw_item:Шасси|ВЫПУЩЕНЫ:sim/cockpit/switches/gear_handle_status:1
 sw_item:Носовое колесо|ЗЕЛЁНЫЙ СВЕТИТСЯ:sim/flightmodel2/gear/deploy_ratio[0]:1
 sw_item:Левое колесо|ЗЕЛЁНЫЙ СВЕТИТСЯ:sim/flightmodel2/gear/deploy_ratio[1]:1
 sw_item:Правое колесо|ЗЕЛЁНЫЙ СВЕТИТСЯ:sim/flightmodel2/gear/deploy_ratio[2]:1
 sw_item:Закрылки 20|ВЫПУЩЕНЫ:sim/flightmodel/controls/wing1l_fla1def:19|21
-sw_item:Режим двигателя|ВЫДЕРЖИВАТЬ СКОРОСТЬ 250-270км/ч:sim/flightmodel/position/indicated_airspeed:<145
+sw_item:Режим двигателя|СКОРОСТЬ 250-270км/ч:sim/flightmodel/position/indicated_airspeed:<145
 sw_item:Бустер|ВКЛЮЧЕН:sim/custom/xap/misc/noseweel:0
 sw_itemvoid:Перед входом в глиссаду
-sw_item:Режим двигателя|ВЫДЕРЖИВАТЬ СКОРОСТЬ НЕ БОЛЕЕ 250км/ч:sim/flightmodel/position/indicated_airspeed:<135
-sw_item:Закрылки 35|ВЫПУЩЕНЫ|SET:sim/flightmodel/controls/wing1l_fla1def:34|36
-sw_item:Режим двигателя|ВЫДЕРЖИВАТЬ СКОРОСТЬ 200-220км/ч:sim/flightmodel/position/indicated_airspeed:<118
+sw_item:Режим двигателя|СКОРОСТЬ НЕ БОЛЕЕ 250км/ч:sim/flightmodel/position/indicated_airspeed:<135
+sw_item:Закрылки 35|ВЫПУЩЕНЫ:sim/flightmodel/controls/wing1l_fla1def:34|36
+sw_item:Режим двигателя|СКОРОСТЬ 200-220км/ч:sim/flightmodel/position/indicated_airspeed:<118
 sw_item:Тормоза|ОСВОБОЖДЕНЫ!!:sim/flightmodel/controls/parkbrake:0
 sw_itemvoid:После входа в глиссаду
-sw_itemvoid:СКВ
+sw_item:СКВ|ВКЛЮЧЕНА:sim/custom/xap/srd/bleed_ON:0
 sw_item:Фары|ВЫПУЩЕНЫ:sim/custom/xap/misc/lan_light_open_sw:1
 sw_item:Левая фара|ПОСАДОЧНЫЙ:sim/cockpit2/switches/landing_lights_switch[0]:1
 sw_item:Правая фара|ПОСАДОЧНЫЙ:sim/cockpit2/switches/landing_lights_switch[1]:1
@@ -368,24 +369,24 @@ sw_itemvoid:ВПР РЕШЕНИЕ
 sw_checklist:После посадки
 sw_rcolsize:20
 sw_item:РУДы|МАЛЫЙ ГАЗ:sim/cockpit2/engine/actuators/throttle_ratio:<0.1
-sw_item:Реверс|ВКЛЮЧЕН:sim/cockpit2/annunciators/reverser_on:1
+sw_item:Реверс|ВКЛЮЧЕН:sim/cockpit2/annunciators/reverser_on[0]:1
 sw_item:Скорость 150|НАЧАТЬ ТОРМОЖЕНИЕ:sim/flightmodel/position/indicated_airspeed:<80
 sw_item:РУДы|МАЛЫЙ ГАЗ:sim/cockpit2/engine/actuators/throttle_ratio:<0.1
-sw_item:Скорость 120|РЕВЕРС ВЫКЛЮЧИТЬ:sim/flightmodel/position/indicated_airspeed:65
-sw_item:Реверсe|ВЫКЛЮЧЕН:sim/cockpit2/annunciators/reverser_on:0
+sw_item:Скорость 120|РЕВЕРС ВЫКЛЮЧИТЬ:sim/flightmodel/position/indicated_airspeed:<65
+sw_item:Реверсe|ВЫКЛЮЧЕН:sim/cockpit2/annunciators/reverser_on[0]:0
+sw_item:Левая фара|РУЛЁЖНЫЙ:sim/cockpit2/switches/landing_lights_switch[0]:0.4
+sw_item:Правая фара|РУЛЁЖНЫЙ:sim/cockpit2/switches/landing_lights_switch[1]:0.4
 sw_item:Скорость освобождения ВПП|НЕ БОЛЕЕ 30км/ч:sim/flightmodel/position/indicated_airspeed:<16.2
 sw_itemvoid:После освобождения ВПП
 sw_item:Часы|ТАЙМЕР ОСТАНОВИТЬ
 sw_item:Время посадки|ЗАПИСАТЬ
-sw_item:Левая фара|РУЛЁЖНЫЙ:sim/cockpit2/switches/landing_lights_switch[0]:0.4
-sw_item:Правая фара|РУЛЁЖНЫЙ:sim/cockpit2/switches/landing_lights_switch[1]:0.4
 sw_item:Закрылки|УБРАНЫ:sim/flightmodel/controls/wing1l_fla1def:0
-sw_item:Стабилизатор|НЕЙТРАЛЬНО:sim/custom/xap/control/pitch_trim:-1
+sw_item:Стабилизатор|НЕЙТРАЛЬНО:sim/custom/xap/control/pitch_trim:<-2.0
 sw_item:Режим ответчика|РСП:sim/cockpit/radios/transponder_mode:1
 sw_item:Локатор|ВЫКЛЮЧЕН:sim/custom/xap/gauges/kontur_power:0
 sw_item:KLN90B|ВЫКЛЮЧЕНА:sim/custom/xap/kln_power:0
 sw_item:Обогрев ДУА|ВЫКЛЮЧЕН:sim/custom/xap/antiice/aoa:0
-sw_item:ПОС режим|ВЫКЛЮЧЕНА:sim/custom/xap/antiice/system_mode1:1
+sw_item:ПОС режим|ВЫКЛЮЧЕНА:sim/custom/xap/antiice/system_mode1:0
 sw_item:Обогрев ППД левый|ВЫКЛЮЧЕН:sim/custom/xap/antiice/pitot1:0
 sw_item:Обогрев ППД правый|ВЫКЛЮЧЕН:sim/custom/xap/antiice/pitot2:0
 sw_item:Обогрев РИО-3|ВЫКЛЮЧЕН:sim/custom/xap/antiice/rio3:0
@@ -403,9 +404,8 @@ sw_item:Левый генератор|ВЫКЛЮЧЕН:sim/custom/xap/power/gen1
 sw_item:Средний генератор|ВЫКЛЮЧЕН:sim/custom/xap/power/gen2_on_bus:0
 sw_item:Правый генератор|ВЫКЛЮЧЕН:sim/custom/xap/power/gen3_on_bus:0
 sw_item:Планка РУД|ПОДНЯТА:sim/custom/xap/eng/red_rud_close:0
-sw_item:Защелки двигателей|ПОДНЯТЫ:sim/flightmodel/engine/ENGN_thro:0
+sw_item:Защелки двигателей|ПОДНЯТЫ:sim/custom/xap/eng/rud_close:1
 sw_item:РУДы|МАЛЫЙ ГАЗ:sim/cockpit2/engine/actuators/throttle_ratio:<0.1
-sw_item:Планка РУД|ОПУЩЕНАА:sim/custom/xap/eng/red_rud_close:1
 sw_item:Колодки|УСТАНОВЛЕНЫ:sim/custom/xap/covers/gear_blocks:1
 sw_item:Аэродромное питание|ПОДКЛЮЧИТЬ:sim/custom/xap/power/ground_available:1
 sw_item:Источник питания|АЭРОДРОМНОЕ:sim/custom/xap/power/power_mode:0
@@ -427,22 +427,24 @@ sw_rcolsize:20
 sw_item:Левый АРК режим|ВЫКЛЮЧЕН:sim/custom/xap/ark/ark_1_mode:0
 sw_item:Правый АРК режим|ВЫКЛЮЧЕН:sim/custom/xap/ark/ark_2_mode:0
 sw_item:Радиовысотомер|ВЫКЛЮЧЕН:sim/custom/xap/gauges/rv_2_sw:0
-sw_item:Резервный АГД|ВЫКЛЮЧЕН:sim/custom/xap/gauges/agd_2_sw:0
-sw_item:Курс-МП левый|ВЫКЛЮЧЕН:sim/custom/xap/gauges/nav1_power:0
-sw_item:Курс-МП правый|ВЫКЛЮЧЕН:sim/custom/xap/gauges/nav2_power:0
-sw_item:ДМЕ|ВЫКЛЮЧЕН:sim/custom/xap/gauges/dme_power_sw:0
 sw_item:СО-72 ответчик|ВЫКЛЮЧЕН:sim/custom/xap/sq/sq_sw:0
+sw_item:Курс-МП левый|ВЫКЛЮЧЕН:sim/custom/xap/gauges/nav1_power:0
+sw_item:Резервный АГД|ВЫКЛЮЧЕН:sim/custom/xap/gauges/agd_2_sw:0
 sw_item:Левый топливный насос|ВЫКЛЮЧЕН:sim/custom/xap/fuel/fuel_pump1_sw:0
 sw_item:Правый топливный насос|ВЫКЛЮЧЕН:sim/custom/xap/fuel/fuel_pump2_sw:0
 sw_item:АЦТ|ВЫКЛЮЧЕНО:sim/custom/xap/fuel/act_sw:0
 sw_item:Манометры|ВЫКЛЮЧЕНЫ:sim/custom/xap/misc/manometer_sw:0
 sw_item:Автопилот|ВЫКЛЮЧЕН:sim/custom/xap/AP/power_sw:0
 sw_item:Крышка управления закрылками|ЗАКРЫТА:sim/custom/xap/hydro/flaps_valve_cap:0
+sw_item:ПТ-1000Ц|ВЫКЛЮЧЕН:sim/custom/xap/power/inv_PT1000:0
+sw_item:ПО радио|ВЫКЛЮЧЕН:sim/custom/xap/power/inv_PO1500_radio:0
 sw_item:Питание стопорения рулей|ВКЛЮЧЕНО:sim/custom/xap/control/control_fix_pow:1
 sw_item:Выключатель стопорения рулей|ЗАСТОПОРЕНО:sim/custom/xap/control/control_fix_sw:1
 sw_item:Питание стопорения рулей|ВЫКЛЮЧЕНО:sim/custom/xap/control/control_fix_pow:0
-sw_item:ПТ-1000Ц|ВЫКЛЮЧЕН:sim/custom/xap/power/inv_PT1000:1
-sw_item:ПО радио|ВЫКЛЮЧЕН:sim/custom/xap/power/inv_PO1500_radio:1
+sw_item:MSRP питание|ВЫКЛЮЧЕНО:sim/custom/xap/azs/AZS_msrp_power:0
+sw_item:MSRP включение|ВЫКЛЮЧЕНО:sim/custom/xap/azs/AZS_msrp_on:0
+sw_item:Курс-МП правый|ВЫКЛЮЧЕН:sim/custom/xap/gauges/nav2_power:0
+sw_item:ДМЕ|ВЫКЛЮЧЕН:sim/custom/xap/gauges/dme_power_sw:0
 sw_item:Все АЗС на левой и правой панели|ВЫКЛЮЧЕНЫ:sim/custom/xap/azs/AZS_aileron_trim_sw:0
 sw_item:Источник питания|ВЫКЛЮЧЕНО:sim/custom/xap/power/power_mode:1
 sw_item:Заглушки чехлы|УСТАНОВЛЕНЫ:sim/custom/xap/covers/static1_cap:1

@@ -10,10 +10,8 @@ YOU SHOULDN'T EVEN READ IT!
 #4       THIS PAGE       
 #Timezone1
 #Barounit0
-#GPSHobbs51715.711825371
-#GPSTurnons30
-#Lasttype0
-#LastidentUNKL 
+#GPSHobbs55608.107363701
+#GPSTurnons31
 #LastLat56.171497344971
 #LastLon92.498908996582
 #RWYminlength1000
