@@ -10,6 +10,7 @@ defineProperty("options_subpanel", globalPropertyi("sim/custom/xap/panels/option
 defineProperty("nl10", globalPropertyi("sim/custom/xap/panels/nl10"))
 defineProperty("info_panel", globalPropertyi("sim/custom/xap/panels/info_subpanel"))
 defineProperty("ap_subpanel", globalPropertyi("sim/custom/xap/panels/ap_subpanel"))
+defineProperty("stab_check", globalPropertyi("sim/custom/xap/panels/stab_check"))
 
 
 
@@ -72,8 +73,8 @@ function update()
     p7 = get(panel_7)
     p8 = get(panel_8)
     p9 = get(panel_9)
---[[    p10 = get(panel_10)
-	p11 = get(panel_11)
+	p10 = get(panel_10)
+--[[    	p11 = get(panel_11)
 	p12 = get(panel_12)
 	p13 = get(panel_13)
 	p14 = get(panel_14)
@@ -96,8 +97,8 @@ function update()
 	p7.visible = get(nl10) == 1
 	p8.visible = get(info_panel) == 1
 	p9.visible = get(ap_subpanel) == 1
---[[	p10.visible = false --get(service_subpanel) == 1
-	p11.visible = false --get(payload_subpanel) == 1
+	p10.visible = get(stab_check) == 1
+--[[		p11.visible = false --get(payload_subpanel) == 1
 	p12.visible = false --get(nl10m_subpanel) == 1
 	p13.visible = false --get(map_subpanel) == 1
 	p14.visible = false --get(options_subpanel) == 1
@@ -253,3 +254,17 @@ function panel_9_handler(phase)  -- for all commands phase equals: 0 on press; 1
 return 0
 end
 registerCommandHandler(panel_9_command, 0, panel_9_handler)
+
+local panel_10_command = createCommand("xap/panels/panel_10", "panel 10")
+function panel_10_handler(phase)  -- for all commands phase equals: 0 on press; 1 while holding; 2 on release
+	if 0 == phase then
+            if get(stab_check) ~= 0 then
+                set(stab_check, 0)
+            else
+                set(stab_check, 1)
+				movePanelToTop(p9)
+            end
+    end
+return 0
+end
+registerCommandHandler(panel_10_command, 0, panel_10_handler)

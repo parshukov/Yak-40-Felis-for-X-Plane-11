@@ -624,6 +624,7 @@ createProp("sim/custom/xap/panels/options_subpanel", "int", 0); -- options panel
 createProp("sim/custom/xap/panels/nl10", "int", 0); -- NL-10m panel
 createProp("sim/custom/xap/panels/info_subpanel", "int", 0);  -- info panel. 0 = OFF, 1 = ON
 createProp("sim/custom/xap/panels/ap_subpanel", "int", 0);  -- autopilot panel. 0 = OFF, 1 = ON
+createProp("sim/custom/xap/panels/stab_check", "int", 0);  -- stab_check panel. 0 = OFF, 1 = ON
 
 -- autopilot
 createProp("sim/custom/xap/AP/power_sw", "int", 1) -- power switcher
@@ -821,6 +822,22 @@ ap_panel = subpanel {
 	};
 }
 
+-- add stab_check subpanel
+stab_check = subpanel {
+    position = { 600, 220, 700, 509 };
+    noBackground = true;
+    noClose = true;
+	components = {
+		stab_check {
+         position = { 0, 0, 700, 509 },
+         };
+	textureLit {
+		 position = {(700 - 20), (509 - 20), 16, 16},
+		 image = get(closeImage),
+		 };
+	};
+}
+
 -- add menu subpanel
 main_menu = subpanel {
     position = { 0, 300, 32, 260 };
@@ -839,6 +856,7 @@ main_menu = subpanel {
 		panel_7 = nl10m_panel,
 		panel_8 = info_panel,
 		panel_9 = ap_panel,
+		panel_10 = stab_check,
          };
 	};
 }
@@ -868,6 +886,7 @@ components = {
 		panel_7 = nl10m_panel,
 		panel_8 = info_panel,
 		panel_9 = ap_panel,
+		panel_10 = stab_check,
 	},
 
 	battery_logic{},
