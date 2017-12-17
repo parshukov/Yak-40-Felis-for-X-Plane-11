@@ -230,7 +230,7 @@ sw_rcolsize:20
 sw_item:KLN90B|СОГЛАСОВАНО
 sw_item:Стояночный тормоз|ВЫКЛЮЧЕН:sim/flightmodel/controls/parkbrake:0
 sw_item:Руление|~30км/ч:sim/flightmodel/position/indicated_airspeed:1|17
-sw_itemid:Основные тормоза|ПРОВЕРЕНЫ
+sw_itemvoid:Основные тормоза|ПРОВЕРЕНЫ
 sw_item:Показания гирокомпаса|ПРОВЕРЕНЫ
 sw_item:Указатель поворота на ДА-30|ПРОВЕРЕН
 
@@ -346,7 +346,7 @@ sw_rcolsize:20
 sw_item:Маршрут/Посадка режим|ПОСАДКА:sim/custom/xap/gauges/kp_route:0
 sw_itemvoid:Перед разворотом на посадочную прямую
 sw_item:Радиовысотомер|ВПР УСТАНОВЛЕНА
-sw_item:Режим двигателя|СКОРОСТЬ < 300км/ч:sim/flightmodel/position/indicated_airspeed:<151
+sw_item:Режим двигателя|СКОРОСТЬ < 300км/ч:sim/flightmodel/position/indicated_airspeed:<161
 sw_item:Шасси|ВЫПУЩЕНЫ:sim/cockpit/switches/gear_handle_status:1
 sw_item:Носовое колесо|ЗЕЛЁНЫЙ СВЕТИТСЯ:sim/flightmodel2/gear/deploy_ratio[0]:1
 sw_item:Левое колесо|ЗЕЛЁНЫЙ СВЕТИТСЯ:sim/flightmodel2/gear/deploy_ratio[1]:1
@@ -360,7 +360,7 @@ sw_item:Закрылки 35|ВЫПУЩЕНЫ:sim/flightmodel/controls/wing1l_fla
 sw_item:Режим двигателя|СКОРОСТЬ 200-220км/ч:sim/flightmodel/position/indicated_airspeed:<118
 sw_item:Тормоза|ОСВОБОЖДЕНЫ!!:sim/flightmodel/controls/parkbrake:0
 sw_itemvoid:После входа в глиссаду
-sw_item:СКВ|ВКЛЮЧЕНА:sim/custom/xap/srd/bleed_ON:0
+sw_item:СКВ|ВЫКЛЮЧЕНА:sim/custom/xap/srd/bleed_ON:0
 sw_item:Фары|ВЫПУЩЕНЫ:sim/custom/xap/misc/lan_light_open_sw:1
 sw_item:Левая фара|ПОСАДОЧНЫЙ:sim/cockpit2/switches/landing_lights_switch[0]:1
 sw_item:Правая фара|ПОСАДОЧНЫЙ:sim/cockpit2/switches/landing_lights_switch[1]:1
