@@ -10,7 +10,8 @@ createProp("sim/custom/xap/sim_version", "int", 9); -- sim version
 
 -- create custom data-refs
 -- all initial values are for running engines load
-
+--		print (oil_t),
+--		message_printed = true,
 -- time --
 createProp("sim/custom/xap/time/frame_time", "float", 0.01); -- time between frames
 
@@ -370,6 +371,7 @@ createProp("sim/custom/xap/gauges/rv_2_cc", "float", 0); --rv work
 
 -- fuel
 createProp("sim/custom/xap/fuel/act_sw", "int", 1); -- center fuel automat switcher
+createProp("sim/custom/xap/fuel/act_test_lamp", "int", 1);-- center fuel automat control lamp-------------pilot40
 createProp("sim/custom/xap/fuel/fuel_pump1_sw", "int", 1); -- fuel pump switcher
 createProp("sim/custom/xap/fuel/fuel_pump2_sw", "int", 1); -- fuel pump switcher
 createProp("sim/custom/xap/fuel/fuel_pump2_emerg_sw", "int", 0); -- fuel pump switcher
@@ -622,6 +624,7 @@ createProp("sim/custom/xap/panels/options_subpanel", "int", 0); -- options panel
 createProp("sim/custom/xap/panels/nl10", "int", 0); -- NL-10m panel
 createProp("sim/custom/xap/panels/info_subpanel", "int", 0);  -- info panel. 0 = OFF, 1 = ON
 createProp("sim/custom/xap/panels/ap_subpanel", "int", 0);  -- autopilot panel. 0 = OFF, 1 = ON
+createProp("sim/custom/xap/panels/stab_check", "int", 0);  -- stab_check panel. 0 = OFF, 1 = ON
 
 -- autopilot
 createProp("sim/custom/xap/AP/power_sw", "int", 1) -- power switcher
@@ -819,6 +822,22 @@ ap_panel = subpanel {
 	};
 }
 
+-- add stab_check subpanel
+stab_check = subpanel {
+    position = { 600, 220, 700, 509 };
+    noBackground = true;
+    noClose = true;
+	components = {
+		stab_check {
+         position = { 0, 0, 700, 509 },
+         };
+	textureLit {
+		 position = {(700 - 20), (509 - 20), 16, 16},
+		 image = get(closeImage),
+		 };
+	};
+}
+
 -- add menu subpanel
 main_menu = subpanel {
     position = { 0, 300, 32, 260 };
@@ -837,6 +856,7 @@ main_menu = subpanel {
 		panel_7 = nl10m_panel,
 		panel_8 = info_panel,
 		panel_9 = ap_panel,
+		panel_10 = stab_check,
          };
 	};
 }
@@ -866,6 +886,7 @@ components = {
 		panel_7 = nl10m_panel,
 		panel_8 = info_panel,
 		panel_9 = ap_panel,
+		panel_10 = stab_check,
 	},
 
 	battery_logic{},
@@ -1003,16 +1024,17 @@ components = {
 		position = {1200, 1646, 200, 200},
 		fuel_p = globalPropertyf("sim/cockpit2/engine/indicators/fuel_pressure_psi[1]"),
 		oil_p = globalPropertyf("sim/cockpit2/engine/indicators/oil_pressure_psi[1]"),
-		oil_t = globalPropertyf("sim/cockpit2/engine/indicators/oil_temperature_deg_C[1]"),
+		oil_t = globalPropertyf("sim/cockpit2/engine/indicators/oil_pressure_psi[1]"),
 		AZS = globalPropertyi("sim/custom/xap/azs/AZS_eng_gau_1_sw"),
 		emi_cc = globalPropertyf("sim/custom/xap/gauges/emi1_cc"), -- cc
+		
 	},
 
 	emi3 {
 		position = {1400, 1646, 200, 200},
 		fuel_p = globalPropertyf("sim/cockpit2/engine/indicators/fuel_pressure_psi[0]"),
 		oil_p = globalPropertyf("sim/cockpit2/engine/indicators/oil_pressure_psi[0]"),
-		oil_t = globalPropertyf("sim/cockpit2/engine/indicators/oil_temperature_deg_C[0]"),
+		oil_t = globalPropertyf("sim/cockpit2/engine/indicators/oil_pressure_psi[0]"),
 		AZS = globalPropertyi("sim/custom/xap/azs/AZS_eng_gau_2_sw"),
 		emi_cc = globalPropertyf("sim/custom/xap/gauges/emi2_cc"), -- cc
 	},
@@ -1021,7 +1043,7 @@ components = {
 		position = {1600, 1646, 200, 200},
 		fuel_p = globalPropertyf("sim/cockpit2/engine/indicators/fuel_pressure_psi[2]"),
 		oil_p = globalPropertyf("sim/cockpit2/engine/indicators/oil_pressure_psi[2]"),
-		oil_t = globalPropertyf("sim/cockpit2/engine/indicators/oil_temperature_deg_C[2]"),
+		oil_t = globalPropertyf("sim/cockpit2/engine/indicators/oil_pressure_psi[2]"),
 		AZS = globalPropertyi("sim/custom/xap/azs/AZS_eng_gau_3_sw"),
 		emi_cc = globalPropertyf("sim/custom/xap/gauges/emi3_cc"), -- cc
 	},

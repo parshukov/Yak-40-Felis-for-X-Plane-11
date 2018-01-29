@@ -3,6 +3,8 @@ size = {2048, 2048}
 
 defineProperty("act_sw", globalPropertyi("sim/custom/xap/fuel/act_sw")) -- center fuel automat switcher
 defineProperty("act_test_but", globalPropertyi("sim/custom/xap/fuel/act_test_but")) -- center fuel automat switcher
+defineProperty("act_test_lamp", globalPropertyi("sim/custom/xap/fuel/act_test_lamp")) -- center fuel automat lamp-----------------pilot40
+
 defineProperty("fuel_pump1_sw", globalPropertyi("sim/custom/xap/fuel/fuel_pump1_sw")) -- fuel pump switcher
 defineProperty("fuel_pump2_sw", globalPropertyi("sim/custom/xap/fuel/fuel_pump2_sw")) -- fuel pump switcher
 defineProperty("fuel_pump2_emerg_sw", globalPropertyi("sim/custom/xap/fuel/fuel_pump2_emerg_sw")) -- fuel pump switcher
@@ -109,6 +111,13 @@ function update()
 	join_lit = power and get(join_fuel_access) == 1 or test_lamp
 	circle_lit = power and get(circle_fuel_access) == 1 or test_lamp
 	act_lit = power and (left_pump_lit and right_pump_lit and get(act_sw) == 1 and get(inv_PO1500_radio) == 1 and q1 > 200 and q2 > 200 or get(act_test_but) == 1) or test_lamp
+	
+	-- ACT test lamp
+	if act_lit == 0 then set(act_test_lamp, 0)
+	else set(act_test_lamp, 1)
+	end
+	
+	
 	act_fail_lit = power and get(act_sw) == 1 and not act_lit or test_lamp
 	valve1_lit = power and get(fire_valve1) > 0.5 or test_lamp
 	valve2_lit = power and get(fire_valve2) > 0.5 or test_lamp

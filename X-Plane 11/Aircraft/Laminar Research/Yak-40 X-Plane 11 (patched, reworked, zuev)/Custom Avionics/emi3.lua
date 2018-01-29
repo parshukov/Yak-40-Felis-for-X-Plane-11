@@ -16,7 +16,26 @@ defineProperty("fuel_p", globalPropertyf("sim/cockpit2/engine/indicators/fuel_pr
 defineProperty("oil_p", globalPropertyf("sim/cockpit2/engine/indicators/oil_pressure_psi[0]"))
 
 -- oil temperature
-defineProperty("oil_t", globalPropertyf("sim/cockpit2/engine/indicators/oil_temperature_deg_C[0]"))
+--xpl_dataref_subscribe("sim/cockpit2/engine/indicators/oil_temperature_deg_C", "FLOAT[8]", oil_temp)
+--defineProperty("oil_ta", globalPropertyf("sim/cockpit2/engine/indicators/oil_temperature_deg_C[4]"))
+--defineProperty("oil_t", globalPropertyf("sim/cockpit2/engine/indicators/oil_temperature_deg_C[0]"))
+defineProperty("oil_t", globalPropertyf("sim/cockpit2/engine/indicators/oil_pressure_psi[0]"))
+--defineProperty("oil_t_0", globalPropertyf("sim/cockpit2/engine/indicators/oil_temperature_deg_C[0]"))
+--defineProperty("oil_t_1", globalPropertyf("sim/cockpit2/engine/indicators/oil_temperature_deg_C[1]"))
+--defineProperty("oil_t_2", globalPropertyf("sim/cockpit2/engine/indicators/oil_temperature_deg_C[2]"))
+--    get(oil_t_0)
+--    print (oil_t_0)
+--    message_printed = true
+--	get(oil_t_1)
+--    print (oil_t_1)
+--    message_printed = true
+--	get(oil_t_2)
+--    print (oil_t_2)
+--    message_printed = true
+      --get(oil_ta[2])
+      --print (oil_ta[2])
+      --message_printed = true
+
 
 -- power
 defineProperty("DC_27_volt", globalPropertyf("sim/custom/xap/power/DC_27_volt")) -- 27 volt
@@ -33,6 +52,12 @@ local fuel_p_angle = -65
 local oil_p_angle = 155
 local oil_t_angle = -155
 
+-- function oil_temp(oil_temperature)
+--   -- #oil_temperature would give the array length
+--   -- data[1] would give the first object in the array
+--   print("Array contains " .. #oil_temperature .. " items. Data on first position is: " .. oil_temperature[1])
+-- end
+
 function update()
 	-- check power
 	local power27 = 0
@@ -42,6 +67,7 @@ function update()
 	local CC = 0
 	if get(DC_27_volt) > 21 then power27 = 1 else power27 = 0 end
 	if get(AC_36_volt) > 30 then power36 = 1 else power36 = 0 end
+
 	
 	-- fuel and oil pressure angle
     if power27 * power36 * manometer * azs > 0 then
@@ -58,6 +84,8 @@ function update()
 	
 	if power27 * azs > 0 then
 		oil_t_angle = get(oil_t) * 120 / 200 - 120
+		--print (oil_ta)
+        --message_printed = true
 		-- set limits 
 		if oil_t_angle > -30 then oil_t_angle = -30
 		elseif oil_t_angle < -150 then oil_t_angle = -150
@@ -69,7 +97,6 @@ function update()
 	
 	set(emi_cc, CC)
 
-	
 end
 
 -- emi3 consists of several components
@@ -100,8 +127,8 @@ components = {
         position = { 107, 10, 106, 106 },
         image = get(needles_1),
         angle = function()
-			return oil_t_angle
-        end   
+			return oil_t_angle			
+        end        	
     },   
  
 	-- yellow cap

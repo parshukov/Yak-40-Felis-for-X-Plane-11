@@ -154,7 +154,7 @@ function update()
 	local p1 = KLN90_panel
 	local p2 = MD41_panel
 	local p3 = KLNpopup_panel
-	p1.visible = get(KLN90visible) == 1  
+	p1.visible = get(KLN90visible) == 0  
 	p2.visible = get(MD41visible) == 1  
 	p3.visible = get(KLN90popupvisible) == 1  
 

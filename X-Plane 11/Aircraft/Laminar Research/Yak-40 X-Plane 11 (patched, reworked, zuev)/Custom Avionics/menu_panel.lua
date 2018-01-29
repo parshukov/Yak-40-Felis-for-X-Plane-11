@@ -11,6 +11,7 @@ defineProperty("options_subpanel", globalPropertyi("sim/custom/xap/panels/option
 defineProperty("nl10", globalPropertyi("sim/custom/xap/panels/nl10"))
 defineProperty("info_panel", globalPropertyi("sim/custom/xap/panels/info_subpanel"))
 defineProperty("ap_subpanel", globalPropertyi("sim/custom/xap/panels/ap_subpanel"))
+defineProperty("stab_check", globalPropertyi("sim/custom/xap/panels/stab_check"))
 
 -- images
 defineProperty("background", loadImage("menu_panel.png"))
@@ -47,7 +48,7 @@ defineProperty("panel_20")
 	panel_7 = NL-10m
 	panel_8 = info_panel
 	panel_9 = AP
-	panel_10 = 
+	panel_10 = Stab 
 	panel_11 = 
 	panel_12 = 
 	panel_13 = 
@@ -254,6 +255,24 @@ components = {
         end 
     },
 
+	-- stab_check
+    switch {
+        position = { 0, 11, 32, 24},
+        state = function()
+            return get(stab_check) ~= 0
+        end,
+        --btnOn = get(tmb_up),
+        --btnOff = get(tmb_dn),
+        onMouseClick = function()
+            if get(stab_check) ~= 0 then
+                set(stab_check, 0)
+            else
+                set(stab_check, 1)
+				movePanelToTop(p5)
+            end 
+            return true;
+        end 
+    },
 
 }
 

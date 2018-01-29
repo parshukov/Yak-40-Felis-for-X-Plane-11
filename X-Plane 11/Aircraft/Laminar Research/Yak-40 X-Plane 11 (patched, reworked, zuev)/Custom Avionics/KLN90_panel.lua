@@ -136,6 +136,11 @@ defineProperty("KLN90visible", globalPropertyi("sim/custom/xap/KLN90/visible"))
 defineProperty("popx", globalPropertyi("sim/custom/xap/KLN90pop/x"))
 defineProperty("popy", globalPropertyi("sim/custom/xap/KLN90pop/y"))
 
+--check kln power
+createProp("sim/custom/xap/kln_power", "int", 0);
+defineProperty("kln_power", globalPropertyi("sim/custom/xap/kln_power"));
+
+
 local alert = loadSample('altitude_alerts.wav')
 local alertl = loadSample('altitude_alert.wav')
 
@@ -143,7 +148,7 @@ local font = loadFont('KLN90.fnt')
 local fontb = loadFont('KLN90_2.fnt')
 local fontl = loadFont('KLN90_3.fnt')
 local cagevisible = 0
-local power = 0
+power = 0
 
 local brt = 0.8
 
@@ -7414,7 +7419,10 @@ function WPTpage(types, mode, subpage)
 					function update()
 						popx2 = get(popx)
 						popy2 = get(popy)
-						
+						--check kln power
+						if power == 0 then set(kln_power, 0)
+						else set(kln_power, 1)
+						end
 						
 						
 						--##############################################################################################################################This is the power off page
