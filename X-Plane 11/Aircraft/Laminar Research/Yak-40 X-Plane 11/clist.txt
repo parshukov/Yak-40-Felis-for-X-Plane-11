@@ -1,0 +1,635 @@
+sw_checklist:Pre-Flight
+sw_rcolsize:20
+sw_item:Parking brake|SET:sim/flightmodel/controls/parkbrake:!0
+sw_item:Pins and covers|REMOVED, ON BOARD:sim/custom/xap/covers/static1_cap:0
+sw_item:Doors|SECURED:sim/cockpit2/switches/custom_slider_on[4]:0
+sw_item:GPU|CONNECTED:sim/custom/xap/power/ground_available:1
+sw_item:Power source selector|GPU:sim/custom/xap/power/power_mode:0
+
+sw_checklist:Before Engine Start (part 1)
+sw_rcolsize:20
+sw_itemvoid:AZS panel left
+sw_item:VHF1 radio breaker|ON:sim/custom/xap/azs/AZS_COM_1_sw:1
+sw_item:Fuel gauge breaker|ON:sim/custom/xap/azs/AZS_fuel_meter_sw:1
+sw_item:Test lamps breaker|ON:sim/custom/xap/azs/test_lamps_sw:1
+sw_item:CO-72 transponder breaker|ON:sim/custom/xap/azs/AZS_transp_sw:1
+sw_item:36V emerg breaker|ON:sim/custom/xap/azs/AZS_36v_emerg_sw:1
+sw_item:Defrost radio breaker|ON:sim/custom/xap/azs/AZS_POradio_sw:1
+sw_item:Defrost window breaker|ON:sim/custom/xap/azs/AZS_POsteklo_sw:1
+sw_item:115V emerg breaker|ON:sim/custom/xap/azs/AZS_115v_emerg_sw:1
+sw_item:AI-9 ignition breaker|ON:sim/custom/xap/azs/AZS_start_apu_sw:1
+sw_itemvoid:AZS panel right
+sw_item:Hydraulic system braker|ON:sim/custom/xap/azs/AZS_hydrosys_sw:1
+sw_item:Ladder breaker|ON:sim/custom/xap/azs/AZS_ladder_sw:1
+sw_item:Emerg. pump braker|ON:sim/custom/xap/azs/AZS_join_sw:1
+
+sw_checklist:Controls On and Check
+sw_rcolsize:20
+sw_item:Fixator power switch|ON:sim/custom/xap/control/control_fix_pow:1
+sw_item:Fixator switch|OFF:sim/custom/xap/control/control_fix_sw:0
+sw_itemvoid:
+sw_item:Full left:sim/cockpit2/controls/yoke_roll_ratio:-1
+sw_item:Full right:sim/cockpit2/controls/yoke_roll_ratio:1
+sw_item:Full up:sim/cockpit2/controls/yoke_pitch_ratio:1
+sw_item:Full down:sim/cockpit2/controls/yoke_pitch_ratio:-1
+sw_item:Rudder left:sim/cockpit2/controls/yoke_heading_ratio:-1
+sw_item:Rudder right:sim/cockpit2/controls/yoke_heading_ratio:1
+sw_itemvoid:
+sw_item:Flight controls|CHECKED:sim/custom/xap/control/control_fix:0
+sw_item:Fixator power switch|OFF:sim/custom/xap/control/control_fix_pow:0
+
+sw_checklist:Before Engine Start (part 2)
+sw_rcolsize:20
+sw_item:PT-1000 inverter|ON:sim/custom/xap/power/inv_PT1000:1
+sw_item:PT-500 inverter|ON:sim/custom/xap/power/inv_PT500:1
+sw_item:Defrost window inverter|ON:sim/custom/xap/power/inv_PO1500_steklo:1
+sw_item:Defrost radio inverter|ON:sim/custom/xap/power/inv_PO1500_radio:1
+sw_itemvoid:
+sw_item:Navigation light|ON:sim/custom/xap/misc/nav_light_sw:1
+
+sw_checklist:At night time
+sw_item:Cabin lighting left, right|ON:sim/custom/xap/misc/salon_main_sw:1
+sw_item:Cabin lighting auxulary|ON:sim/custom/xap/misc/salon_emerg_sw:1
+sw_item:Emergency exit lighting|ON:sim/custom/xap/misc/emerg_exit_light_sw:1
+
+sw_checklist:Load plane
+sw_item:Power to ladder|ON:sim/custom/xap/misc/ladder_power_sw:1
+sw_item:Ladder extend switch cap|OPENED:sim/custom/xap/misc/ladder_sw_cap:1
+sw_item:Ladder extend switch|ON:sim/custom/xap/misc/ladder_sw_cap:1
+sw_item:Ladder|EXTENDED:sim/custom/xap/misc/ladder_sw:1
+sw_itemvoid:
+sw_item:Plane|LOAD:sim/custom/xap/panels/payload:1
+
+sw_checklist:Before Engine Start (part 3)
+sw_rcolsize:20
+sw_item:Transponder|CO-72M:sim/custom/xap/sq/sq_sw:1
+sw_item:Transponder mode|STANDBY:sim/cockpit/radios/transponder_mode:1
+sw_itemvoid:
+sw_item:Engine thrust stop plank|IN PLACE:sim/custom/xap/eng/red_rud_close:1
+sw_itemvoid:
+sw_item:Defrost control cap|OPEN:sim/custom/xap/antiice/system_cap:1
+sw_item:Defrost control switch|OFF:sim/custom/xap/antiice/system_sw:0
+sw_itemvoid:
+sw_item:Fuel boost pump left|ON:sim/custom/xap/fuel/fuel_pump1_sw:1
+sw_item:Fuel boost pump right|ON:sim/custom/xap/fuel/fuel_pump2_sw:1
+sw_item:Fuel X-feed|ON:sim/custom/xap/fuel/act_sw:1
+sw_item:Fuel X-feed test button|PRESS:sim/custom/xap/fuel/act_test_but:1
+sw_item:Fuel X-feed lamp|GREEN:sim/custom/xap/fuel/act_test_but:1
+sw_item:Hydraulic pressure gauges|ON:sim/custom/xap/misc/manometer_sw:1
+sw_itemvoid:
+sw_item:Throttles|IDLE:sim/cockpit2/engine/actuators/throttle_ratio:<0.1
+
+sw_checklist:Before Engine Start (part 4)
+sw_item:GNS430|ON/SET:PNV/GNS430/onoff:1
+sw_itemvoid:or
+sw_item:KLN90B|ON/SET:sim/custom/kln_power:1
+sw_item:Plane|LOADED:sim/custom/xap/panels/payload:0
+sw_itemvoid:
+sw_item:Ladder|RETRACTED:sim/custom/xap/misc/ladder_sw:0
+sw_item:Ladder extend switch cap|SECURED:sim/custom/xap/misc/ladder_sw_cap:0
+sw_item:Power to ladder|OFF:sim/custom/xap/misc/ladder_power_sw:0
+sw_item:No Smoking, Fasten Seatbelts signs|ON:sim/cockpit2/switches/no_smoking:1
+sw_itemvoid:
+sw_item:Beacon light|ON:sim/custom/xap/misc/bec_light_sw:1
+
+sw_checklist:AI-9 Start
+sw_rcolsize:20
+sw_item:Lamps test button|PRESS:sim/custom/xap/buttons/but_test_lamp:1
+sw_item:Panel warnings|ALL LAMPS ARE ON:sim/custom/xap/hydro/press_low_lit:1
+sw_itemvoid:
+sw_item:AI-9 fire warning|ON:sim/custom/xap/gauges/fire_siren_sw:1
+sw_item:AI-9 fire valve switch|ON:sim/custom/xap/fuel/fire_valve_apu_sw:1
+sw_item:AI-9 fire valve|ON:sim/custom/xap/fuel/fire_valve_apu:>0.5
+sw_itemvoid:
+sw_item:"Start on ground" cover|OPENED:sim/cockpit2/switches/custom_slider_on[11]:1
+sw_item:AI-9 starter|START:sim/custom/xap/apu/starter_sw:1
+sw_item:AI-9 starter mode|START:sim/custom/xap/apu/starter_mode:1
+sw_item:AI-9 starter button|PRESS AND HOLD:(sim/cockpit/engine/APU_N1:>1)&&(sim/cockpit/engine/APU_N1:>0)
+sw_itemvoid:
+sw_item:AI-9|IGNITION:sim/custom/xap/apu/apu_egt:>50
+sw_item:Oil pressure|NOMINAL:sim/cockpit/engine/APU_N1:>94.5
+sw_item:AI-9|STARTED:sim/cockpit/engine/APU_N1:>96.5
+sw_item:Starter air pressure|STABILIZED:sim/custom/xap/start/starter_press:>1.9
+sw_item:AI-9|READY:sim/cockpit/engine/APU_N1:>99
+
+sw_checklist:Engines Start (part 1)
+sw_rcolsize:20
+sw_itemvoid:AZS panel left
+sw_item:Fire warning 1 breaker|ON:sim/custom/xap/azs/AZS_fire_signal1_sw:1
+sw_item:Fire warning 2 breaker|ON:sim/custom/xap/azs/AZS_fire_signal2_sw:1
+sw_item:Fire warning 3 breaker|ON:sim/custom/xap/azs/AZS_fire_signal3_sw:1
+sw_item:Fire valves left breaker|ON:sim/custom/xap/azs/AZS_fire_valve1_sw:1
+sw_item:Fire valves center breaker|ON:sim/custom/xap/azs/AZS_fire_valve2_sw:1
+sw_item:Fire valves right breaker|ON:sim/custom/xap/azs/AZS_fire_valve3_sw:1
+sw_item:Fire extinguisher system 1 breaker|ON:sim/custom/xap/azs/AZS_fire_ext1_sw:1
+sw_item:Fire extinguisher system 2 breaker|ON:sim/custom/xap/azs/AZS_fire_ext2_sw:1
+sw_item:Fire extinguisher system 3 breaker|ON:sim/custom/xap/azs/AZS_fire_ext3_sw:1
+sw_item:Start warning lamps breaker|ON:sim/custom/xap/azs/AZS_sign_start_sw:1
+sw_item:AI-25 engine ignition left breaker|ON:sim/custom/xap/azs/AZS_ignition1_sw:1
+sw_item:AI-25 engine ignition center breaker|ON:sim/custom/xap/azs/AZS_ignition2_sw:1
+sw_item:AI-25 engine ignition right breaker|ON:sim/custom/xap/azs/AZS_ignition3_sw:1
+sw_item:Fire extinguisher valve 1 breaker|ON:sim/custom/xap/azs/AZS_fire_ext_valve1_sw:1
+sw_item:Fire extinguisher valve 2 breaker|ON:sim/custom/xap/azs/AZS_fire_ext_valve2_sw:1
+sw_item:Fire extinguisher valve 3 breaker|ON:sim/custom/xap/azs/AZS_fire_ext_valve3_sw:1
+
+sw_checklist:Engines Start (part 2)
+sw_rcolsize:20
+sw_item:Lamps test button|PRESS:sim/custom/xap/buttons/but_test_lamp:1
+sw_item:Panel warnings|ALL LAMPS ARE ON:sim/custom/xap/hydro/press_low_lit:1
+sw_itemvoid:
+sw_item:AI-25 fire valve switch left|ON:sim/custom/xap/fuel/fire_valve1_sw:1
+sw_item:AI-25 fire valve cap left|CLOSED:sim/custom/xap/fuel/fire_valve1_sw_cap:0
+sw_item:AI-25 fire valve left|ON:sim/custom/xap/fuel/fire_valve1:>0.5
+sw_itemvoid:
+sw_item:AI-25 fire valve switch center|ON:sim/custom/xap/fuel/fire_valve2_sw:1
+sw_item:AI-25 fire valve cap center|CLOSED:sim/custom/xap/fuel/fire_valve2_sw_cap:0
+sw_item:AI-25 fire valve center|ON:sim/custom/xap/fuel/fire_valve2:>0.5
+sw_itemvoid:
+sw_item:AI-25 fire valve switch right|ON:sim/custom/xap/fuel/fire_valve3_sw:1
+sw_item:AI-25 fire valve cap right|CLOSED:sim/custom/xap/fuel/fire_valve3_sw_cap:0
+sw_item:AI-25 fire valve right|ON:sim/custom/xap/fuel/fire_valve3:>0.5
+sw_itemvoid:
+sw_item:Captain's window|OPEND:sim/flightmodel2/misc/custom_slider_ratio[1]:1
+
+sw_checklist:Left Engine Start
+sw_rcolsize:20
+sw_item:AI-25 starter|START:sim/custom/xap/start/start_sw:1
+sw_item:AI-25 starter mode|START:sim/custom/xap/start/start_mode_sw:1
+sw_item:AI-25 starter target|LEFT:sim/custom/xap/start/eng_select_sw:1
+sw_item:AI-25 start button|PRESS AND HOLD:(sim/custom/xap/start/start_but:1)&&(sim/custom/xap/start/starter_work_lit:1)
+sw_itemvoid:
+sw_item:Engine air starter|OPEN:sim/custom/xap/start/starter_work_lit:1
+sw_item:Left engine oil pressure|INCREASING:sim/flightmodel/engine/ENGN_oil_press_psi[1]:>10
+sw_item:Left engine RMP|INCREASING:sim/cockpit2/engine/indicators/engine_speed_rpm[1]:>15
+sw_item:Left engine ignition|CHECKED:sim/cockpit2/engine/indicators/EGT_deg_C[1]:>60
+sw_item:Left engine EGT|INCREASING:sim/cockpit2/engine/indicators/EGT_deg_C[1]:>300
+sw_item:Engine air starter|CLOSED:sim/custom/xap/start/starter_work_lit:0
+sw_item:Left engine|STARTED:sim/cockpit2/engine/indicators/engine_speed_rpm[1]:>2400
+sw_item:Left engine RPM|STABILIZED:sim/cockpit2/engine/indicators/engine_speed_rpm[1]:>51
+sw_item:Left engine EGT|NORMAL:sim/cockpit2/engine/indicators/EGT_deg_C[1]:>200
+sw_item:Left engine oil pressure|NORMAL:sim/flightmodel/engine/ENGN_oil_press_psi[1]:>55
+sw_itemvoid:
+sw_item:Generator left|ON:sim/custom/xap/power/gen1_on_bus:1
+
+sw_checklist:Right Engine Start
+sw_rcolsize:20
+sw_item:AI-25 starter target|RIGHT:sim/custom/xap/start/eng_select_sw:3
+sw_item:AI-25 starter button|PRESS AND HOLD:(sim/custom/xap/start/start_but:1)&&(sim/custom/xap/start/starter_work_lit:1)
+sw_itemvoid:
+sw_item:Engine air starter|OPEN:sim/custom/xap/start/starter_work_lit:1
+sw_item:Right engine oil pressure|INCREASING:sim/flightmodel/engine/ENGN_oil_press_psi[2]:>10
+sw_item:Right engine RMP|INCREASING:sim/cockpit2/engine/indicators/engine_speed_rpm[2]:>15
+sw_item:Right engine ignition|CHECKED:sim/cockpit2/engine/indicators/EGT_deg_C[2]:>60
+sw_item:Right engine EGT|INCREASING:sim/cockpit2/engine/indicators/EGT_deg_C[2]:>300
+sw_item:Engine air starter|CLOSED:sim/custom/xap/start/starter_work_lit:0
+sw_item:Right engine|STARTED:sim/cockpit2/engine/indicators/engine_speed_rpm[2]:>2400
+sw_item:Right engine RPM|STABILIZED:sim/cockpit2/engine/indicators/engine_speed_rpm[2]:>51
+sw_item:Right engine EGT|NORMAL:sim/cockpit2/engine/indicators/EGT_deg_C[2]:>200
+sw_item:Right engine oil pressure|NORMAL:sim/flightmodel/engine/ENGN_oil_press_psi[2]:>55
+sw_itemvoid:
+sw_item:Generator right|ON:sim/custom/xap/power/gen3_on_bus:1
+
+sw_checklist:Center Engine Start
+sw_rcolsize:20
+sw_item:AI-25 starter target|CENTER:sim/custom/xap/start/eng_select_sw:2
+sw_item:AI-25 starter button|PRESS AND HOLD:(sim/custom/xap/start/start_but:1)&&(sim/custom/xap/start/starter_work_lit:1)
+sw_itemvoid:
+sw_item:Engine air starter|OPEN:sim/custom/xap/start/starter_work_lit:1
+sw_item:Center engine oil pressure|INCREASING:sim/flightmodel/engine/ENGN_oil_press_psi[0]:>10
+sw_item:Center engine RMP|INCREASING:sim/cockpit2/engine/indicators/engine_speed_rpm[0]:>15
+sw_item:Center engine ignition|CHECKED:sim/cockpit2/engine/indicators/EGT_deg_C[0]:>60
+sw_item:Center engine EGT|INCREASING:sim/cockpit2/engine/indicators/EGT_deg_C[0]:>300
+sw_item:Engine air starter|CLOSED:sim/custom/xap/start/starter_work_lit:0
+sw_item:Center engine|STARTED:sim/cockpit2/engine/indicators/engine_speed_rpm[0]:>2400
+sw_item:Center engine RPM|STABILIZED:sim/cockpit2/engine/indicators/engine_speed_rpm[0]:>51
+sw_item:Center engine EGT|NORMAL:sim/cockpit2/engine/indicators/EGT_deg_C[0]:>200
+sw_item:Centert engine oil pressure|NORMAL:sim/flightmodel/engine/ENGN_oil_press_psi[0]:>55
+sw_itemvoid:
+sw_item:Generator center|ON:sim/custom/xap/power/gen2_on_bus:1
+
+sw_checklist:AI-9 Stop
+sw_rcolsize:20
+sw_item:AI-9 fire valve switch|OFF:sim/custom/xap/fuel/fire_valve_apu_sw:0
+sw_item:AI-9 fire valve|OFF:sim/custom/xap/fuel/fire_valve_apu:<0.5
+sw_itemvoid:
+sw_item:AI-9 Starter|OFF:sim/custom/xap/apu/starter_sw:0
+sw_item:AI-9 starter mode|RESET:sim/custom/xap/apu/starter_mode:0
+sw_itemvoid:
+sw_item:AI-25 starter|OFF:sim/custom/xap/start/start_sw:0
+sw_item:AI-25 starter mode|RESET:sim/custom/xap/start/start_mode_sw:0
+sw_item:AI-25 starter target|RESET:sim/custom/xap/start/eng_select_sw:0
+sw_itemvoid:
+sw_item:"Start on ground" cover|CLOSED:sim/cockpit2/switches/custom_slider_on[11]:0
+
+sw_checklist:After Engines Start
+sw_rcolsize:20
+sw_item:Captain's window|CLOSED:sim/flightmodel2/misc/custom_slider_ratio[1]:0
+sw_item:First officer's window|CLOSED:sim/flightmodel2/misc/custom_slider_ratio[2]:0
+sw_itemvoid:
+sw_item:Power source selector|BATTERY:sim/custom/xap/power/power_mode:2
+sw_item:Battery|CHARGING:sim/custom/xap/power/gen1_amp_bus:>0
+sw_item:GPU|DISCONNECTED:sim/custom/xap/power/ground_available:0
+sw_itemvoid:
+sw_item:Join valve cap|OPEN:sim/custom/xap/fuel/join_valve_sw_cap:1
+sw_item:Join valve|ON:sim/custom/xap/fuel/join_valve_sw:1
+sw_item:Join valve cap|CLOSED:sim/custom/xap/fuel/join_valve_sw_cap:0
+sw_item:Circle valve cap|OPEN:sim/custom/xap/fuel/circle_valve_sw_cap:1
+sw_item:Circle valve|ON:sim/custom/xap/fuel/circle_valve_sw:1
+sw_item:Circle valve cap|CLOSED:sim/custom/xap/fuel/circle_valve_sw_cap:0
+sw_itemvoid:AZS panels left, right
+sw_item:All remaining breakers|ENABLED:sim/custom/xap/azs/AZS_gears_main_sw:1
+sw_itemvoid:AZS panel left
+sw_item:AI-9 ignition breaker|OFF:sim/custom/xap/azs/AZS_start_apu_sw:0
+
+sw_checklist:Before Taxi (part 1)
+sw_rcolsize:20
+sw_item:Radio altimeter|ON:sim/custom/xap/gauges/rv_2_sw:1
+sw_item:AGD Auxiliary|ON:sim/custom/xap/gauges/agd_2_sw:1
+sw_itemvoid:
+sw_item:NAV1 receiver|ON:sim/custom/xap/gauges/nav1_power:1
+sw_item:NAV2 receiver|ON:sim/custom/xap/gauges/nav2_power:1
+sw_item:DME receiver|ON:sim/custom/xap/gauges/dme_power_sw:1
+sw_itemvoid:
+sw_item:ADF1 receiver mode|COMP:sim/custom/xap/ark/ark_1_mode:1
+sw_item:ADF2 receiver mode|COMP:sim/custom/xap/ark/ark_2_mode:1
+sw_itemvoid:
+sw_item:ILS/SP-50 mode selector|SP-50:sim/custom/xap/gauges/kp_mode:1
+sw_item:ILS/SP-50 mode selector|ILS:sim/custom/xap/gauges/kp_mode:0
+sw_item:Route/Landing mode selector|ROUTE:sim/custom/xap/gauges/kp_route:1
+sw_itemvoid:
+sw_item:Gyroscope hemisphere|NORTH:sim/custom/xap/gauges/GMK_north:1
+sw_item:Active gyro|MAIN:sim/custom/xap/gauges/GMK_select:0
+sw_item:Gyroscope latitude|SET:sim/custom/xap/gauges/GMK_lat:><0.001
+sw_item:Gyroscope mode|GPK:sim/custom/xap/gauges/gyro_mode:1
+sw_itemvoid:
+sw_item:Autopilot power|ON:sim/custom/xap/AP/power_sw:1
+sw_item:Autopilot pitch mode|ON:sim/custom/xap/AP/pitch_sw:1
+sw_item:Autopilot|READY:sim/custom/xap/AP/ap_ready_lit:1
+
+sw_checklist:Before Taxi (part 2)
+sw_rcolsize:20
+sw_item:Main artificial horizon|ALIGNED:sim/custom/xap/gauges/pitch_1:<1
+sw_item:Auxiliary artificial horizon|ALIGNED:sim/custom/xap/gauges/pitch_2:<1
+sw_item:Copilot's artificial horizon|ALIGNED:sim/custom/xap/gauges/pitch_3:<1
+sw_itemvoid:
+sw_item:Left fuel gauge's inner scale's value|CHECKED:sim/custom/xap/fuel/fuel_meter_mode:-1
+sw_item:Right fuel gauge's inner scale's value|CHECKED:sim/custom/xap/fuel/fuel_meter_mode:1
+sw_itemvoid:
+sw_item:Captain's meters altimeter|QFE:sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot:><0.001
+sw_item:Captain's feet altimeter|QFE/QNH:sim/custom/xap/gauges/vd10ft_press:><0.001
+sw_item:Radio altimeter|100 METERS AGL:sim/cockpit/misc/radio_altimeter_minimum:330
+sw_item:Copilot's meters altimeter|QFE:sim/cockpit2/gauges/actuators/barometer_setting_in_hg_copilot:><0.001
+sw_item:Copilot's feet altimeter|QFE/QNH:sim/custom/xap/gauges/uvid30fk_press:><0.001
+
+sw_checklist:Before Taxi (part 3)
+sw_rcolsize:20
+sw_item:Emergency hydraulic pump switch cap|OPEN:sim/custom/xap/hydro/emerg_pump_sw_cap:1
+sw_item:Emergency hydraulic pump switch|MANUAL:sim/custom/xap/hydro/emerg_pump_sw:-1
+sw_item:Emergency hydraulic pressure|NORMAL:sim/custom/xap/hydro/emerg_press:>135
+sw_item:Emergency hydraulic pump switch|AUTO:sim/custom/xap/hydro/emerg_pump_sw:1
+sw_item:Emergency hydraulic pump switch cap|CLOSED:sim/custom/xap/hydro/emerg_pump_sw_cap:0
+sw_itemvoid:
+sw_item:Cabin pressure warning signal|ON:sim/custom/xap/gauges/srd_siren_sw:1
+sw_item:In cabin temperature|AUTO:sim/custom/xap/skv/salon_temp_sw:1
+sw_item:In air-vent temperature|AUTO:sim/custom/xap/skv/system_temp_sw:1
+sw_item:Cabin pressure mode|1:sim/custom/xap/skv/skv_mode_sw:1
+sw_item:In cabin rheostat|20 degrees:sim/custom/xap/skv/salon_temp_rot:20
+sw_item:In air-vent rheostat|20 degrees:sim/custom/xap/skv/thu_temp_rot:20
+sw_itemvoid:
+sw_item:Stabilizer trim|SET:sim/custom/xap/control/pitch_sw:-1
+sw_item:Ailerons trim|ZERO:sim/custom/xap/control/roll_trim:0
+sw_item:Rudder trim|ZERO:sim/custom/xap/control/yaw_trim:0
+sw_itemvoid:
+sw_item:Flaps switch cap|OPENED:sim/custom/xap/hydro/flaps_valve_cap:1
+sw_item:Flaps 20 degrees|SET:sim/flightmodel/controls/wing1l_fla1def:19|21
+
+sw_checklist:Before Taxi (part 4)
+sw_rcolsize:20
+sw_item:HSI heading|RUNWAY
+sw_item:NAV1 freq|SET:sim/cockpit/radios/nav1_freq_hz:><0.001
+sw_item:NAV1 course|SET:sim/cockpit/radios/nav1_obs_degm:><0.001
+sw_item:NAV2 freq|SET:sim/cockpit/radios/nav2_freq_hz:><0.001
+sw_item:NAV2 course|SET:sim/cockpit/radios/nav2_obs_degm:><0.001
+sw_item:DME freq|SET:sim/cockpit/radios/dme_freq_hz:><0.001
+sw_item:DME units|SET:sim/custom/xap/gauges/dme_mode_sw:><0.001
+sw_item:ADF1 Right 100 value|SET:sim/custom/xap/ark/ark_1_right_100:><0.001
+sw_item:ADF1 Right 10 value|SET:sim/custom/xap/ark/ark_1_right_10:><0.001
+sw_item:ADF1 Right 1 value|SET:sim/custom/xap/ark/ark_1_right_1:><0.001
+sw_item:ADF2 Left 100 value|SET:sim/custom/xap/ark/ark_2_left_100:><0.001
+sw_item:ADF2 Left 10 value|SET:sim/custom/xap/ark/ark_2_left_10:><0.001
+sw_item:ADF2 Left 1 value|SET:sim/custom/xap/ark/ark_2_left_1:><0.001
+sw_itemvoid:V1 speed|_____/Km\h
+sw_itemvoid:Vr speed|_____/Km\h
+sw_itemvoid:V2 speed|_____/Km\h
+
+sw_checklist:Taxi
+sw_rcolsize:20
+sw_item:Wheen anti-blocking system|ON:sim/custom/xap/hydro/abs_sw:1
+sw_itemvoid:
+sw_item:Lights housings|EXTENDED:sim/custom/xap/misc/lan_light_open_sw:1
+sw_item:Left light|TAXI:sim/cockpit2/switches/landing_lights_switch[0]:0.4
+sw_item:Right light|TAXI:sim/cockpit2/switches/landing_lights_switch[1]:0.4
+sw_itemvoid:
+sw_item:Parking brakes|RELEASED:sim/flightmodel/controls/parkbrake:0
+sw_item:Pedal brakes|TESTED:sim/custom/xap/hydro/emerg_brake:>0.1
+
+sw_checklist:Before Takeoff (At PRESS AND HOLD short)
+sw_rcolsize:20
+sw_item:Windshield anti-ice switch|LOW:sim/custom/xap/antiice/window:-1
+sw_itemvoid:
+sw_item:Defrost control switch|WORK:sim/custom/xap/antiice/system_sw:1
+sw_item:Defrost control cap|SECURED:sim/custom/xap/antiice/system_cap:0
+sw_item:Pitot heat left|ON:sim/custom/xap/antiice/pitot1:1
+sw_item:Pitot heat right|ON:sim/custom/xap/antiice/pitot2:1
+sw_item:Ice warning|ON:sim/custom/xap/antiice/rio3:1
+sw_item:Defrost control mode|AUTO:sim/custom/xap/antiice/system_mode1:1
+sw_itemvoid:
+sw_item:Transponder mode|CHARLIE:sim/cockpit/radios/transponder_mode:2
+
+sw_checklist:Takeoff (Runway lineup)
+sw_rcolsize:20
+sw_item:Timer|START
+sw_item:WX radar|ON:sim/custom/xap/gauges/kontur_power:1
+sw_itemvoid:
+sw_item:AOA heat|ON:sim/custom/xap/antiice/aoa:1
+sw_itemvoid:
+sw_item:Throttles|IDLE:sim/cockpit2/engine/actuators/throttle_ratio:<0.1
+sw_itemvoid:
+sw_item:Nose landing gear booster switch cap|OPENED:sim/custom/xap/misc/noseweel_cap:1
+sw_item:Nose landing gear booster cut-out switch|ON:sim/custom/xap/misc/noseweel:1
+sw_itemvoid:
+sw_item:Left light|LANDING:sim/cockpit2/switches/landing_lights_switch[0]:1
+sw_item:Right light|LANDING:sim/cockpit2/switches/landing_lights_switch[1]:1
+sw_itemvoid:
+sw_item:Pedal brakes|PRESS AND HOLD:sim/custom/xap/hydro/emerg_brake:>0.1
+sw_item:Throttle|FULL:sim/cockpit2/engine/actuators/throttle_ratio_all:1
+sw_item:Pedal brakes|RELEASED:sim/custom/xap/hydro/emerg_brake:0
+
+sw_checklist:After Takeoff
+sw_item:Safety height|REACHED:sim/custom/xap/gauges/radioalt:>10
+sw_item:Landing gear|RETRACT:sim/cockpit/switches/gear_handle_status:0
+sw_item:Nose gear indicator|RED LIGHT:sim/flightmodel2/gear/deploy_ratio[0]:0
+sw_item:Left gear indicator|RED LIGHT:sim/flightmodel2/gear/deploy_ratio[1]:0
+sw_item:Right gear indicator|RED LIGHT:sim/flightmodel2/gear/deploy_ratio[2]:0
+sw_itemvoid:
+sw_item:Radio altitude|50m:sim/custom/xap/gauges/radioalt:>50
+sw_item:Left throttle|95% N1:sim/flightmodel/engine/ENGN_N1_[0]:84|86
+sw_item:Center throttle|95% N1:sim/flightmodel/engine/ENGN_N1_[1]:84|86
+sw_item:Right throttle|95% N1:sim/flightmodel/engine/ENGN_N1_[2]:84|86
+sw_itemvoid:
+sw_item:Radio altitude|120m AGL:sim/custom/xap/gauges/radioalt:>120
+sw_item:IAS|>250 Km\h:sim/flightmodel/position/indicated_airspeed:>134
+sw_item:Flaps|RETRACTED:sim/flightmodel/controls/wing1l_fla1def:0
+sw_itemvoid:
+sw_item:Radio altitude|200m AGL:sim/custom/xap/gauges/radioalt:>200
+sw_item:IAS|300 Km\h:sim/flightmodel/position/indicated_airspeed:>161
+sw_item:Cabin pressure switch|ON:(sim/custom/xap/srd/system_sw:1)&&(sim/custom/xap/srd/bleed_ON:1)
+sw_itemvoid:
+sw_item:Radio altitude|400m AGL:sim/custom/xap/gauges/radioalt:>400
+sw_item:Left light|OFF:sim/cockpit2/switches/landing_lights_switch[0]:0
+sw_item:Right light|OFF:sim/cockpit2/switches/landing_lights_switch[1]:0
+sw_item:Lights housings|RETRACTED:sim/custom/xap/misc/lan_light_open_sw:0
+
+sw_checklist:Climb
+sw_rcolsize:20
+sw_itemvoid:At transition altitude
+sw_item:Captain's meters altimeter 760|SET:sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot:29.92
+sw_item:Captain's feet altimeter 1013|SET:sim/custom/xap/gauges/vd10ft_press:29.914015
+sw_item:Radio altimeter|ZERO:sim/cockpit/misc/radio_altimeter_minimum:0
+sw_itemvoid:
+sw_item:Copilot's meters altimeter 760|SET:sim/cockpit2/gauges/actuators/barometer_setting_in_hg_copilot:29.92
+sw_item:Copilot's feet altimeter 1013|SET:sim/custom/xap/gauges/uvid30fk_press:29.914015
+sw_itemvoid:
+sw_item:Nose landing gear booster cut-out switch|OFF:sim/custom/xap/misc/noseweel:0
+sw_item:Nose landing gear booster switch cap|SECURED:sim/custom/xap/misc/noseweel_cap:0
+sw_itemvoid:
+sw_item:Below 4000 meters:sim/cockpit2/gauges/indicators/altitude_ft_pilot:<13100
+sw_item:IAS|320 Km\h:sim/flightmodel/position/indicated_airspeed:171|173
+sw_itemvoid:
+sw_item:Above 4000 meters:sim/cockpit2/gauges/indicators/altitude_ft_pilot:>13100
+sw_item:IAS|310 Km\h:sim/flightmodel/position/indicated_airspeed:166|168
+sw_itemvoid:
+sw_item:Above 5000 meters:sim/cockpit2/gauges/indicators/altitude_ft_pilot:>16400
+sw_item:IAS|300 Km\h:sim/flightmodel/position/indicated_airspeed:161|164
+sw_itemvoid:
+sw_item:Above 6000 meters:sim/cockpit2/gauges/indicators/altitude_ft_pilot:>19600
+sw_item:IAS|280 Km\h:sim/flightmodel/position/indicated_airspeed:150|152
+
+sw_checklist:Cruise
+sw_rcolsize:20
+sw_item:Left throttle|92%-93% N1:sim/flightmodel/engine/ENGN_N1_[0]:79|84
+sw_item:Center throttle|92%-93% N1:sim/flightmodel/engine/ENGN_N1_[1]:79|84
+sw_item:Right throttle|92%-93% N1:sim/flightmodel/engine/ENGN_N1_[2]:79|84
+sw_itemvoid:
+sw_item:No Smoking, Fasten Seatbelts signs|OFF:sim/cockpit2/switches/no_smoking:0
+sw_itemvoid:Check for:
+sw_itemvoid:Primary flight instruments
+sw_itemvoid:Engine instruments nominal
+sw_itemvoid:Course navigation
+sw_itemvoid:Fuel quantity
+sw_itemvoid:Cabin differential pressure
+
+sw_checklist:~20nm before TOD
+sw_rcolsize:20
+sw_item:Gyroscope latitude|SET:sim/custom/xap/gauges/GMK_lat:><0.001
+sw_itemvoid:
+sw_item:Left fuel gauge's inner scale's value|CHECKED:sim/custom/xap/fuel/fuel_meter_mode:-1
+sw_item:Right fuel gauge's inner scale's value|CHECKED:sim/custom/xap/fuel/fuel_meter_mode:1
+sw_itemvoid:
+sw_item:Main hydro system pressure|CHECKED:sim/custom/xap/hydro/main_press:>99.9
+sw_item:Emerg hydro system pressure|CHECKED:sim/custom/xap/hydro/emerg_press:>99.9
+sw_itemvoid:
+sw_item:Radio altimeter|SET:sim/cockpit/misc/radio_altimeter_minimum:>180
+sw_itemvoid:
+sw_item:No Smoking, Fasten Seatbelts signs|ON:sim/cockpit2/switches/no_smoking:1
+sw_itemvoid:
+sw_item:NAV1 freq|SET:sim/cockpit/radios/nav1_freq_hz:><0.001
+sw_item:NAV1 course|SET:sim/cockpit/radios/nav1_obs_degm:><0.001
+sw_item:NAV2 freq|SET:sim/cockpit/radios/nav2_freq_hz:><0.001
+sw_item:NAV2 course|SET:sim/cockpit/radios/nav2_obs_degm:><0.001
+sw_item:DME freq|SET:sim/cockpit/radios/dme_freq_hz:><0.001
+sw_item:DME units|SET:sim/custom/xap/gauges/dme_mode_sw:><0.001
+sw_item:ADF1 Right 100 value|SET:sim/custom/xap/ark/ark_1_right_100:><0.001
+sw_item:ADF1 Right 10 value|SET:sim/custom/xap/ark/ark_1_right_10:><0.001
+sw_item:ADF1 Right 1 value|SET:sim/custom/xap/ark/ark_1_right_1:><0.001
+sw_item:ADF2 Left 100 value|SET:sim/custom/xap/ark/ark_2_left_100:><0.001
+sw_item:ADF2 Left 10 value|SET:sim/custom/xap/ark/ark_2_left_10:><0.001
+sw_item:ADF2 Left 1 value|SET:sim/custom/xap/ark/ark_2_left_1:><0.001
+
+sw_checklist:Descent (part 1)
+sw_rcolsize:20
+sw_item:Left throttle|80% N1:sim/flightmodel/engine/ENGN_N1_[0]:51|53
+sw_item:Center throttle|80% N1:sim/flightmodel/engine/ENGN_N1_[1]:51|53
+sw_item:Right throttle|80% N1:sim/flightmodel/engine/ENGN_N1_[2]:51|53
+sw_itemvoid:
+sw_item:Descend rate ~ 7 m\s|SET:sim/flightmodel/position/vh_ind_fpm:<-1376
+
+sw_checklist:Descent (part 2)
+sw_rcolsize:20
+sw_itemvoid:At transition level
+sw_item:Captain's meters altimeter|SET:sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot:><0.001
+sw_item:Captain's feet altimeter|SET:sim/custom/xap/gauges/vd10ft_press:><0.001
+sw_item:Copilot's meters altimeter|SET:sim/cockpit2/gauges/actuators/barometer_setting_in_hg_copilot:><0.001
+sw_item:Copilot's feet altimeter|SET:sim/custom/xap/gauges/uvid30fk_press:><0.001
+
+sw_checklist:Approach & Landing
+sw_rcolsize:20
+sw_item:IAS|<300 Km\h:sim/flightmodel/position/indicated_airspeed:<162
+sw_item:Landing gear|DOWN:sim/cockpit/switches/gear_handle_status:1
+sw_item:Nose gear indicator|GREEN LIGHT:sim/flightmodel2/gear/deploy_ratio[0]:1
+sw_item:Left gear indicator|GREEN LIGHT:sim/flightmodel2/gear/deploy_ratio[1]:1
+sw_item:Right gear indicator|GREEN LIGHT:sim/flightmodel2/gear/deploy_ratio[2]:1
+sw_itemvoid:
+sw_item:IAS|<280 Km\h:sim/flightmodel/position/indicated_airspeed:<151.5
+sw_item:Flaps 20 degrees|SET:sim/flightmodel/controls/wing1l_fla1def:19|21
+sw_itemvoid:
+sw_item:Route\Landing mode selector|LANDING:sim/custom/xap/gauges/kp_route:0
+sw_itemvoid:
+sw_item:IAS|<250 Km\h:sim/flightmodel/position/indicated_airspeed:<135
+sw_item:Flaps 35 degrees|SET:sim/flightmodel/controls/wing1l_fla1def:35
+sw_item:Parking brake released|RELEASED:sim/flightmodel/controls/parkbrake:0
+sw_itemvoid:
+sw_item:Lights housings|EXTENDED:sim/custom/xap/misc/lan_light_open_sw:1
+sw_item:Left light|LANDING:sim/cockpit2/switches/landing_lights_switch[0]:1
+sw_item:Right light|LANDING:sim/cockpit2/switches/landing_lights_switch[1]:1
+sw_itemvoid:
+sw_item:Landing speed|<210 Km\h:sim/flightmodel/position/indicated_airspeed:<113.5
+
+sw_checklist:After Landing (On runway)
+sw_rcolsize:20
+sw_item:Wheel braking speed|<100 Km\h:sim/flightmodel/position/indicated_airspeed:<54
+sw_item:Thrust reverse|OFF:sim/cockpit2/annunciators/reverser_on:0
+sw_item:Throttles|IDLE:sim/cockpit2/engine/actuators/throttle_ratio:<0.1
+sw_item:Wheel braking|APPLY:sim/custom/xap/hydro/emerg_brake:>0.1
+sw_itemvoid:
+sw_item:Timer|STOP
+
+sw_checklist:After Landing (After exit runway)
+sw_item:WX radar|OFF:sim/custom/xap/gauges/kontur_power:0
+sw_item:GNS430|OFF/SET:PNV/GNS430/onoff:0
+sw_itemvoid:or
+sw_item:KLN90B|OFF/SET:sim/custom/kln_power:0
+sw_item:Transponder mode|STANDBY:sim/cockpit/radios/transponder_mode:1
+sw_itemvoid:
+sw_item:Flaps|RETRACTED:sim/flightmodel/controls/wing1l_fla1def:0
+sw_item:Flaps switch cap|SECURED:sim/custom/xap/hydro/flaps_valve_cap:0
+sw_item:Stabilizer trim|RESET:sim/custom/xap/control/pitch_trim:<-1.85
+sw_itemvoid:
+sw_item:AOA heat|OFF:sim/custom/xap/antiice/aoa:0
+sw_item:Windshield anti-ice switch|OFF:sim/custom/xap/antiice/window:0
+sw_item:Defrost control cap|OPENED:sim/custom/xap/antiice/system_cap:1
+sw_item:Defrost control switch|OFF:sim/custom/xap/antiice/system_sw:0
+sw_item:Left pitot heat|OFF:sim/custom/xap/antiice/pitot1:0
+sw_item:Right pitot heat|OFF:sim/custom/xap/antiice/pitot2:0
+sw_item:Ice warning|OFF:sim/custom/xap/antiice/rio3:0
+sw_item:Defrost control mode|OFF:sim/custom/xap/antiice/system_mode1:0
+sw_itemvoid:
+sw_item:Left light|TAXI:sim/cockpit2/switches/landing_lights_switch[0]:0.4
+sw_item:Right light|TAXI:sim/cockpit2/switches/landing_lights_switch[1]:0.4
+
+sw_checklist:Shutdown
+sw_rcolsize:20
+sw_item:Parking brake|SET:sim/flightmodel/controls/parkbrake:>0
+sw_itemvoid:
+sw_item:Wheen anti-blocking system|OFF:sim/custom/xap/hydro/abs_sw:0
+sw_itemvoid:
+sw_item:Left light|OFF:sim/cockpit2/switches/landing_lights_switch[0]:0
+sw_item:Right light|OFF:sim/cockpit2/switches/landing_lights_switch[1]:0
+sw_item:Lights housings|RETRACTED:sim/custom/xap/misc/lan_light_open_sw:0
+sw_itemvoid:
+sw_item:Throttles|IDLE:sim/cockpit2/engine/actuators/throttle_ratio:<0.1
+sw_itemvoid:
+sw_item:AI-25 fire valve cap left|OPENED:sim/custom/xap/fuel/fire_valve1_sw_cap:1
+sw_item:AI-25 fire valve cap center|OPENED:sim/custom/xap/fuel/fire_valve2_sw_cap:1
+sw_item:AI-25 fire valve cap right|OPENED:sim/custom/xap/fuel/fire_valve3_sw_cap:1
+sw_item:AI-25 fire valve left|OFF:sim/custom/xap/fuel/fire_valve1_sw:0
+sw_item:AI-25 fire valve center|OFF:sim/custom/xap/fuel/fire_valve2_sw:0
+sw_item:AI-25 fire valve right|OFF:sim/custom/xap/fuel/fire_valve3_sw:0
+sw_itemvoid:
+sw_item:Beacon light|OFF:sim/custom/xap/misc/bec_light_sw:0
+
+sw_checklist:Securing aircraft (part 1)
+sw_rcolsize:20
+sw_item:Cabin pressure warning signal|OFF:sim/custom/xap/gauges/srd_siren_sw:0
+sw_item:In cabin temperature|OFF:sim/custom/xap/skv/salon_temp_sw:0
+sw_item:In air-vent temperature|OFF:sim/custom/xap/skv/system_temp_sw:0
+sw_itemvoid:
+sw_item:No Smoking, Fasten Seatbelts signs|OFF:sim/cockpit2/switches/no_smoking:0
+sw_itemvoid:
+sw_item:Power to ladder|ON:sim/custom/xap/misc/ladder_power_sw:1
+sw_item:Ladder extend switch cap|OPENED:sim/custom/xap/misc/ladder_sw_cap:1
+sw_item:Ladder extend switch|ON:sim/custom/xap/misc/ladder_sw_cap:1
+sw_item:Ladder|EXTENDED:sim/custom/xap/misc/ladder_sw:1
+
+sw_checklist:At night time
+sw_item:Cabin lighting left,right|OFF:sim/custom/xap/misc/salon_main_sw:0
+sw_item:Cabin lighting auxulary|OFF:sim/custom/xap/misc/salon_emerg_sw:0
+sw_item:Emergency exit lighting|OFF:sim/custom/xap/misc/emerg_exit_light_sw:0
+
+sw_checklist:Securing aircraft (part 2)
+sw_rcolsize:20
+sw_item:"Start on ground" cover|OPENED:sim/cockpit2/switches/custom_slider_on[11]:1
+sw_item:AI-25 starter|OFF:sim/custom/xap/start/start_sw:0
+sw_item:AI-25 starter mode|RESET:sim/custom/xap/start/start_mode_sw:0
+sw_item:AI-25 starter target|RESET:sim/custom/xap/start/eng_select_sw:0
+sw_item:"Start on ground" cover|CLOSED:sim/cockpit2/switches/custom_slider_on[11]:0
+sw_itemvoid:
+sw_item:Radio altimeter|OFF:sim/custom/xap/gauges/rv_2_sw:0
+sw_item:AGD Auxiliary|OFF:sim/custom/xap/gauges/agd_2_sw:0
+sw_item:Transponder|OFF:sim/custom/xap/sq/sq_sw:0
+sw_itemvoid:
+sw_itemvoid:G-load meter's minimum needle position|CHECKED
+sw_itemvoid:G-load meter's maximum needle position|CHECKED
+sw_item:G-load meter|RESET
+
+sw_checklist:Securing aircraft (part 3)
+sw_rcolsize:20
+sw_item:Join valve cap|OPEN:sim/custom/xap/fuel/join_valve_sw_cap:1
+sw_item:Join valve|OFF:sim/custom/xap/fuel/join_valve_sw:0
+sw_item:Join valve cap|CLOSED:sim/custom/xap/fuel/join_valve_sw_cap:0
+sw_item:Circle valve cap|OPEN:sim/custom/xap/fuel/circle_valve_sw_cap:1
+sw_item:Circle valve|OFF:sim/custom/xap/fuel/circle_valve_sw:0
+sw_item:Circle valve cap|CLOSED:sim/custom/xap/fuel/circle_valve_sw_cap:0
+sw_itemvoid:
+sw_item:Fuel boost pump left|OFF:sim/custom/xap/fuel/fuel_pump1_sw:0
+sw_item:Fuel boost pump right|OFF:sim/custom/xap/fuel/fuel_pump2_sw:0
+sw_item:Fuel X-feed|OFF:sim/custom/xap/fuel/act_sw:0
+sw_itemvoid:
+sw_item:Hydraulic pressure gauges|OFF:sim/custom/xap/misc/manometer_sw:0
+sw_itemvoid:
+sw_item:Autopilot system|OFF:sim/custom/xap/AP/power_sw:0
+sw_itemvoid:
+sw_item:Generator left|OFF:sim/custom/xap/power/gen1_on_bus:0
+sw_item:Generator center|OFF:sim/custom/xap/power/gen2_on_bus:0
+sw_item:Generator right|OFF:sim/custom/xap/power/gen3_on_bus:0
+
+sw_checklist:Securing aircraft (part 4)
+sw_rcolsize:20
+sw_item:NAV1 receiver|OFF:sim/custom/xap/gauges/nav1_power:0
+sw_item:NAV2 receiver|OFF:sim/custom/xap/gauges/nav2_power:0
+sw_item:DME receiver|OFF:sim/custom/xap/gauges/dme_power_sw:0
+sw_itemvoid:
+sw_item:ADF1 receiver mode|OFF:sim/custom/xap/ark/ark_1_mode:0
+sw_item:ADF2 receiver mode|OFF:sim/custom/xap/ark/ark_2_mode:0
+sw_itemvoid:
+sw_item:Fixator switch power|ON:sim/custom/xap/control/control_fix_pow:1
+sw_item:Fixator switch|ON:sim/custom/xap/control/control_fix_sw:1
+sw_item:Fixator switch power|OFF:sim/custom/xap/control/control_fix_pow:0
+sw_item:Control inputs secure|CHECKED:sim/custom/xap/control/control_fix:1
+sw_itemvoid:
+sw_item:PT-1000 inverter|OFF:sim/custom/xap/power/inv_PT1000:0
+sw_item:PT-500 inverter|OFF:sim/custom/xap/power/inv_PT500:0
+sw_item:Defrost window inverter|OFF:sim/custom/xap/power/inv_PO1500_steklo:0
+sw_item:Defrost radio inverter|OFF:sim/custom/xap/power/inv_PO1500_radio:0
+sw_itemvoid:AZS panel left, right
+sw_item:All breakers|DISABLED:sim/custom/xap/azs/AZS_aileron_trim_sw:0
+
+sw_checklist:Leaving aircraft
+sw_rcolsize:20
+sw_item:Navigation lights|OFF:sim/custom/xap/misc/nav_light_sw:0
+sw_itemvoid:
+sw_item:Instrument lights|OFF:sim/custom/xap/misc/cockpit_panel:0
+sw_itemvoid:
+sw_item:Power source selector|OFF:sim/custom/xap/power/power_mode:1
+sw_itemvoid:
+sw_item:Equipment covers|INSTALLED:sim/custom/xap/covers/engine2_back_cap:1
