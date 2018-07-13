@@ -12,8 +12,14 @@ There is default branch with stable version (also this version is released) and 
 
 KLN90
 
-This aircraft includes the KLN90 from the EADT project, and it is enabled by default.
+This aircraft includes the 3D KLN90 from the EADT project, and it is enabled by default.
 Make sure to copy the directories from Install_into_main_XP_directory to the root dir of the sim before you load the aircraft.
 The KLN is offered as part of this package by kind permission from Dennis Pruefer, the original author. You are not permitted to redistribute the package commercially with the KLN included.
 
+GNS430
+
+This aircraft also has an option with fully functional 3D GNS!
+
 This aircraft was updated by avsim users: 1941, P.Pranov, R.Guseynov, O.Tronov, N.Parshukov, M.Zuev
+
+
