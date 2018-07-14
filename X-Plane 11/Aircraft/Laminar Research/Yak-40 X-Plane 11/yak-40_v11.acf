@@ -195,7 +195,7 @@ P _gear/0/_lonE 0.0
 P _gear/0/_lonN 0.0
 P _gear/0/_lonR 105.0
 P _gear/0/_scon 14308.075195313
-P _gear/0/_stat_def 0.191898733
+P _gear/0/_stat_def 0.191898704
 P _gear/0/_steerdeg_hispeed 5.0
 P _gear/0/_steerdeg_lospeed 55.0
 P _gear/0/_strut_comp 0.0
@@ -229,7 +229,7 @@ P _gear/1/_lonE 0.0
 P _gear/1/_lonN 0.0
 P _gear/1/_lonR 0.0
 P _gear/1/_scon 22395.248046875
-P _gear/1/_stat_def 0.785264850
+P _gear/1/_stat_def 0.785264671
 P _gear/1/_steerdeg_hispeed 0.0
 P _gear/1/_steerdeg_lospeed 0.0
 P _gear/1/_strut_comp 0.0
@@ -263,7 +263,7 @@ P _gear/2/_lonE 0.0
 P _gear/2/_lonN 0.0
 P _gear/2/_lonR 0.0
 P _gear/2/_scon 22395.248046875
-P _gear/2/_stat_def 0.785264671
+P _gear/2/_stat_def 0.785264611
 P _gear/2/_steerdeg_hispeed 0.0
 P _gear/2/_steerdeg_lospeed 0.0
 P _gear/2/_strut_comp 0.0
@@ -16867,7 +16867,7 @@ P _part/86/_part_specs_invis 0
 P _part/86/_part_tex 0
 P _part/86/_part_the 0.0
 P _part/86/_part_x 7.380000114
-P _part/86/_part_y -5.834735870
+P _part/86/_part_y -5.834736347
 P _part/86/_part_z 33.100017548
 P _part/86/_patt_con 0
 P _part/86/_patt_prt 0
@@ -26333,7 +26333,6 @@ rad_GPS_430_screen Garmin_430_screen.p
   POS 174.000000 306.000000
   DATAREF 
   SIZE 0.810000
-  COPILOT
   LIGHT_MODE MECHANICAL
   LIGHT_RHEOSTAT 0
   KEY_FRAME 0.000000 0.000000 1.000000
