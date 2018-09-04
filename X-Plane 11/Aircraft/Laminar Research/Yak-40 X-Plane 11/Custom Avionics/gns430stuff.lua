@@ -205,7 +205,7 @@ function update()
 				alpha4=0
 				alpha5=0
 				alpha6=0
-				print(blinker)
+				--print(blinker)
 				if get(g430ackow)==2 then
 					blinker=blinker+blinkercoeff*0.03
 					if blinker>1.4 then
