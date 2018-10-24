@@ -1,9 +1,10 @@
-print("it's Yak-40 by Felis modified by 1941, P.Pranov, R.Guseynov, O.Tronov, N.Parshukov, M.Zuev version 2.5")
+print("it's Yak-40 by Felis modified by 1941, P.Pranov, R.Guseynov, O.Tronov, N.Parshukov, M.Zuev version 2.6")
 size = { 2048, 2048 }
 
 -- 3D panel issue workaround
 fixedPanelWidth = 2048
 fixedPanelHeight = 2048
+setRenderingMode2D(SASL_RENDER_2D_MULTIPASS)
 function Cdref(drefNameI, drefLocalI)
     defineProperty(drefNameI, createGlobalPropertyf(drefLocalI))
 end
